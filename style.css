@@ -38,9 +38,9 @@ section {
   align-items: center; 
   justify-content: center; 
   padding: 2em;
-  margin: 2em;
+  margin: 1em;
   height: 80vh; 
-  background: linear-gradient(to right, #d3d3d3, #333); 
+  background: linear-gradient(to right, #bababa, #333); 
   color: #fff; 
 }
 
