@@ -47,7 +47,7 @@ nav ul li a {
   text-decoration: none;
 }
 
-/* Main content section */
+/* Main content section with blurred edges */
 section {
   display: flex;
   flex-direction: column;
@@ -58,8 +58,11 @@ section {
   height: auto; /* Adjust height based on content */
   background: linear-gradient(to right, #bababa, #333); /* Gradient background */
   color: #fff; /* Text color for contrast */
-  max-width: 1200px; /* Restrict the width of the section content */
+  max-width: 800px; /* Restrict the width of the section content */
   text-align: center;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Blurred edge effect */
+  border-radius: 15px; /* Optional: Rounded corners */
 }
 
 /* Styling for images in the section */
@@ -74,6 +77,7 @@ section p {
   text-align: center;
   width: 100%;
 }
+
 
 /* Footer at the bottom, moving with content */
 footer {
