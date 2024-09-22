@@ -34,23 +34,24 @@ nav ul li a {
 
 section {
   display: flex;
-  flex-direction: column; /* Arrange items vertically */
-  align-items: center; /* Horizontally center items */
-  justify-content: center; /* Vertically center items */
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
   padding: 2em;
-  background: linear-gradient(to right, #d3d3d3, #333);
   margin: 1em;
-  height: 80vh; /* Adjust the height as necessary */
+  height: 80vh; 
+  background: linear-gradient(to right, #d3d3d3, #333); 
+  color: #fff; 
 }
 
 section img {
-  max-width: 100%; /* Ensures image is responsive */
+  max-width: 100%; 
   height: auto;
-  margin-bottom: 1em; /* Space between image and text */
+  margin-bottom: 1em; 
 }
 
 section p {
-  text-align: center; /* Center the text content */
+  text-align: center; 
 }
 
 
