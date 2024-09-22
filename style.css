@@ -81,7 +81,7 @@ footer {
   color: #fff;
   padding: 1em 0;
   text-align: center;
-  width: 100vw; /* Ensure the footer takes up the full viewport width */
+  width: 100%vw; /* Ensure the footer takes up the full viewport width */
   position: relative; /* Makes the footer adjust based on content */
   left: 0;
   margin: 0; /* Remove any default margin */
