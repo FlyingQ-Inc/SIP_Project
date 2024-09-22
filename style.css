@@ -1,11 +1,22 @@
+/* Set up flexbox for the entire page */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for the body background */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to left, #bababa, #333);
+  background: linear-gradient(to left, #bababa, #333); /* Gradient background for body */
   color: #333;
 }
 
+/* Header stays at the top */
 header {
   background-color: #333;
   color: #fff;
@@ -13,25 +24,30 @@ header {
   text-align: center;
 }
 
+/* Remove margin for h1 inside the header */
 header h1 {
   margin: 0;
 }
 
+/* Navigation menu styling */
 nav ul {
   list-style: none;
   padding: 0;
 }
 
+/* Inline list items for navigation */
 nav ul li {
   display: inline;
   margin: 0 1em;
 }
 
+/* Navigation links */
 nav ul li a {
   color: #fff;
   text-decoration: none;
 }
 
+/* Main content section */
 section {
   display: flex;
   flex-direction: column;
@@ -39,32 +55,41 @@ section {
   justify-content: center;
   padding: 2em;
   margin: 1em auto; /* Center the section itself */
-  height: 80vh;
+  height: auto; /* Adjust height based on content */
   background: linear-gradient(to right, #bababa, #333); /* Gradient background */
   color: #fff; /* Text color for contrast */
   max-width: 800px; /* Restrict the width of the section content */
   text-align: center;
 }
 
+/* Styling for images in the section */
 section img {
   max-width: 100%; /* Ensures the image is responsive */
   height: auto;
   margin-bottom: 1em; /* Space between image and text */
 }
 
+/* Center text in the section */
 section p {
   text-align: center;
   width: 100%;
 }
 
-
-
+/* Footer at the bottom, moving with content */
 footer {
   background-color: #333;
   color: #fff;
   padding: 1em 0;
   text-align: center;
-  position: absolute;
-  bottom: 0;
   width: 100%;
+  position: relative; /* Makes the footer adjust based on content */
+}
+
+/* Main element stretches to fill the space between header and footer */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
