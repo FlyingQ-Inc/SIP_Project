@@ -34,25 +34,29 @@ nav ul li a {
 
 section {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  justify-content: center; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 2em;
-  margin: 1em;
-  height: 80vh; 
-  background: linear-gradient(to right, #bababa, #333); 
-  color: #fff; 
+  margin: 1em auto; /* Center the section itself */
+  height: 80vh;
+  background: linear-gradient(to right, #bababa, #333); /* Gradient background */
+  color: #fff; /* Text color for contrast */
+  max-width: 800px; /* Restrict the width of the section content */
+  text-align: center;
 }
 
 section img {
-  max-width: 100%; 
+  max-width: 100%; /* Ensures the image is responsive */
   height: auto;
-  margin-bottom: 1em; 
+  margin-bottom: 1em; /* Space between image and text */
 }
 
 section p {
-  text-align: center; 
+  text-align: center;
+  width: 100%;
 }
+
 
 
 footer {
