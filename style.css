@@ -58,7 +58,7 @@ section {
   height: auto; /* Adjust height based on content */
   background: linear-gradient(to right, #bababa, #333); /* Gradient background */
   color: #fff; /* Text color for contrast */
-  max-width: 800px; /* Restrict the width of the section content */
+  max-width: 1200px; /* Restrict the width of the section content */
   text-align: center;
 }
 
