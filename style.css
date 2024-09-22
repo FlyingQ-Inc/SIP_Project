@@ -5,15 +5,16 @@ html, body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box; /* Ensures padding and margins are calculated correctly */
 }
 
 /* Styling for the body background */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background: linear-gradient(to left, #bababa, #333); /* Gradient background for body */
   color: #333;
+  width: 100vw; /* Full viewport width */
+  overflow-x: hidden; /* Prevents any horizontal overflow */
 }
 
 /* Header stays at the top */
@@ -22,6 +23,7 @@ header {
   color: #fff;
   padding: 1em 0;
   text-align: center;
+  width: 100%; /* Ensures header takes up the full width */
 }
 
 /* Remove margin for h1 inside the header */
@@ -54,14 +56,13 @@ section {
   align-items: center;
   justify-content: center;
   padding: 2em;
-  margin: 1em auto; /* Center the section itself */
-  height: auto; /* Adjust height based on content */
+  margin: 2em auto; /* Center the section itself */
   background: linear-gradient(to right, #bababa, #333); /* Gradient background */
   color: #fff; /* Text color for contrast */
   max-width: 800px; /* Restrict the width of the section content */
   text-align: center;
   position: relative;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Blurred edge effect */
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.7); /* More prominent blur effect */
   border-radius: 15px; /* Optional: Rounded corners */
 }
 
@@ -78,15 +79,14 @@ section p {
   width: 100%;
 }
 
-
 /* Footer at the bottom, moving with content */
 footer {
   background-color: #333;
   color: #fff;
   padding: 1em 0;
   text-align: center;
-  width: 100%vw; /* Ensure the footer takes up the full viewport width */
-  position: relative; /* Makes the footer adjust based on content */
+  width: 100%; /* Ensures the footer spans the full width */
+  position: relative; /* Adjust based on content, no absolute position */
   left: 0;
   margin: 0; /* Remove any default margin */
   box-sizing: border-box; /* Ensure padding doesn't affect width */
@@ -99,4 +99,5 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 }
