@@ -11,7 +11,7 @@ html, body {
 /* Styling for the body background */
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to left, #bababa, #333); /* Gradient background for body */
+  background: linear-gradient(to left, #87CEEB, #B0E0E6 50%, #FFFFFF 80%, #87CEEB 100%); /* Sky and cloud-like gradient */
   color: #333;
   width: 100vw; /* Full viewport width */
   overflow-x: hidden; /* Prevents any horizontal overflow */
