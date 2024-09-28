@@ -12,16 +12,14 @@ html, body {
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(to top, #1E90FF, #87CEFA); /* Darker blue at the bottom, lighter blue at the top */
-  color: #333;
-  width: 100vw; /* Full viewport width */
-  height: 100vh; /* Full viewport height */
+  background-size: 100% 100vh; /* Ensure the background covers the entire height of the viewport */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  min-height: 100vh; /* Make sure the body is at least the height of the viewport */
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevents horizontal scrolling */
+  width: 100vw; /* Full viewport width */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
-
-
-
 
 /* Header stays at the top */
 header {
