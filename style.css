@@ -11,17 +11,20 @@ html, body {
 /* Styling for the body background */
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to left, #87CEEB, #87CEEB 25%, #B0E0E6 75%, #87CEEB 100%), /* Base sky */
-              radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.8), transparent 60%), /* Cloud 1 */
-              radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.6), transparent 70%), /* Cloud 2 */
-              radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.5), transparent 70%), /* Cloud 3 */
-              radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.7), transparent 60%); /* Cloud 4 */
-  background-size: cover; /* Ensures the background covers the entire screen */
-  background-repeat: no-repeat; /* Prevents repetition of the pattern */
+  background: linear-gradient(to right, #87CEEB, #87CEEB 25%, #B0E0E6 75%, #87CEEB 100%), /* Base sky */
+              radial-gradient(circle at 20% 40%, rgba(255, 255, 255, 0.8), transparent 60%), /* Cloud 1 */
+              radial-gradient(circle at 60% 30%, rgba(255, 255, 255, 0.6), transparent 70%), /* Cloud 2 */
+              radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.5), transparent 70%), /* Cloud 3 */
+              radial-gradient(circle at 80% 60%, rgba(255, 255, 255, 0.7), transparent 60%); /* Cloud 4 */
+  background-size: 100vw 100vh; /* Make sure it covers the whole viewport */
+  background-repeat: no-repeat; /* Prevents repeating */
+  background-attachment: fixed; /* Ensures background stays in place during scroll */
+  height: 100%; /* Ensure background applies to full page */
   color: #333;
-  width: 100vw; 
-  overflow-x: hidden; /* Prevents any horizontal overflow */
+  width: 100vw; /* Full viewport width */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
+
 
 /* Header stays at the top */
 header {
