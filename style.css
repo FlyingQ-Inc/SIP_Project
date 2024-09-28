@@ -11,19 +11,23 @@ html, body {
 /* Styling for the body background */
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #87CEEB, #87CEEB 25%, #B0E0E6 75%, #87CEEB 100%), /* Base sky */
+  background: linear-gradient(to right, #87CEEB, #87CEEB 30%, #B0E0E6 60%, #87CEEB 100%), /* Base sky */
               radial-gradient(circle at 20% 40%, rgba(255, 255, 255, 0.8), transparent 60%), /* Cloud 1 */
               radial-gradient(circle at 60% 30%, rgba(255, 255, 255, 0.6), transparent 70%), /* Cloud 2 */
               radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.5), transparent 70%), /* Cloud 3 */
               radial-gradient(circle at 80% 60%, rgba(255, 255, 255, 0.7), transparent 60%); /* Cloud 4 */
-  background-size: 100vw 100vh; 
-  background-repeat: no-repeat; /* Prevents repeating */
-  background-attachment: fixed; /* Ensures background stays in place during scroll */
-  height: 100%; 
+  background-size: 100vw 200vh; /* Cover full width, extend vertically beyond view height */
+  background-repeat: no-repeat; /* Prevent repetition of the clouds */
+  background-attachment: fixed; /* Keep the background fixed in place during scroll */
+  background-position: center top; /* Position the background at the top */
+  min-height: 100vh; /* Ensure background covers at least the full height of the viewport */
   color: #333;
-  width: 100vw; 
-  overflow-x: hidden;
+  width: 100vw; /* Full viewport width */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin: 0;
+  padding: 0;
 }
+
 
 
 /* Header stays at the top */
