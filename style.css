@@ -2,7 +2,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100%; /* Ensure the body and html cover at least the full height */
   display: flex;
   flex-direction: column;
   box-sizing: border-box; /* Ensures padding and margins are calculated correctly */
@@ -12,9 +12,10 @@ html, body {
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(to top, #1E90FF, #87CEFA); /* Darker blue at the bottom, lighter blue at the top */
-  background-size: 100% 100vh; /* Ensure the background covers the entire height of the viewport */
+  background-size: 100% 100%; /* Ensure the gradient stretches across the full content */
   background-repeat: no-repeat; /* Prevent the background from repeating */
-  min-height: 100vh; /* Make sure the body is at least the height of the viewport */
+  background-attachment: fixed; /* Keep the background fixed during scrolling */
+  min-height: 100vh; /* Ensure background covers the viewport height */
   margin: 0;
   padding: 0;
   width: 100vw; /* Full viewport width */
