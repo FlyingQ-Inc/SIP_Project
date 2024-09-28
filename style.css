@@ -19,7 +19,7 @@ body {
   background-size: cover; /* Ensures the background covers the entire screen */
   background-repeat: no-repeat; /* Prevents repetition of the pattern */
   color: #333;
-  width: 100vw; /* Full viewport width */
+  width: 100vw; 
   overflow-x: hidden; /* Prevents any horizontal overflow */
 }
 
@@ -69,7 +69,7 @@ section {
   text-align: center;
   position: relative;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.7); /* More prominent blur effect */
-  border-radius: 15px; /* Optional: Rounded corners */
+  border-radius: 15px; /* Rounded corners */
 }
 
 /* Styling for images in the section */
