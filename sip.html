@@ -14,11 +14,19 @@
     }
 
     .progress-update {
+      box-sizing: border-box;
+      width: 100%;
       background: #fff8db;
       color: #222;
       border-left: 5px solid #956400;
       padding: 1rem;
       margin: 1.5rem 0;
+      box-shadow: none;
+    }
+
+    .progress-update p {
+      text-align: left;
+      line-height: 1.6;
     }
 
     .progress-update mark {
@@ -26,10 +34,23 @@
       color: #222;
     }
 
+    .progress-update a {
+      color: #003f70;
+      font-weight: bold;
+    }
+
     .video-thumbnail {
       width: 100%;
       max-width: 300px;
       height: auto;
+    }
+
+    .video-frame {
+      display: block;
+      width: 100%;
+      max-width: 800px;
+      aspect-ratio: 16 / 9;
+      border: 0;
     }
 
     .brief-frame {
@@ -83,59 +104,68 @@
       <section class="progress-update" aria-labelledby="progress-heading">
         <h2 id="progress-heading">
           Progress Update:
-          <time datetime="2026-09-20">September 20, 2026</time>
+          <time datetime="2026-09-30">September 30, 2026</time>
         </h2>
         <p>
           <mark>
-            No additional project work has been completed since the previous
-            module. The following updates describe changes in project direction
-            and planned work.
+            My current SIP brief video is available. Recent progress includes
+            an updated speech, presentation materials, a proposed parts list,
+            and a concept rendering of the off-tower test module.
           </mark>
-          I recently changed jobs and no longer have access to the first two
+          The rendering illustrates the proposed layout and does not represent
+          a completed build.
+        </p>
+        <p>
+          Following my job change, I no longer have access to the first two
           field installations. Although photographs remain available to document
           those iterations, I cannot use the installations for further testing
-          or a live demonstration. To address this setback, I plan to build an
-          off-tower test and display module that can be used for development,
-          simulated fault testing, and presentation.
+          or a live demonstration. The off-tower module will provide an
+          accessible platform for development, testing, and presentation.
         </p>
         <p>
           <mark>
-            The planned monitoring design is changing from a Raspberry Pi and
-            cellular connection to an Arduino-based controller and LoRaWAN.
+            The revised prototype will use 12V DC, an Arduino-based controller,
+            and LoRaWAN reporting. A small UPS will power only the controller
+            and sensors. Solar power is no longer part of the design.
           </mark>
-          Component selection, gateway arrangements, programming, and testing
-          remain to be completed. The earlier solar and battery concept will
-          be reevaluated after the revised hardware and its power requirements
-          are established. Independent operation during a site outage remains
-          a design goal and has not been demonstrated.
+          For the demonstration, I will use a switch to turn off the main
+          supply while the monitoring electronics remain powered to detect
+          and report the outage. The gateway will remain separately powered.
+        </p>
+        <p>
+          Assembly, programming, and functionality testing remain pending.
+          My Week 4 target is to assemble and test the module, subject to
+          parts availability, then record its verified operation.
+        </p>
+        <p>
+          <a href="#current-sip-brief">Watch the current SIP brief video</a>
         </p>
       </section>
 
       <h2>Current Status and Remaining Work</h2>
       <p>
-        The completed work consists of the two earlier physical distribution
-        iterations documented below. Arduino-based monitoring, LoRaWAN reporting,
-        and the off-tower module are planned features and have not yet been
-        demonstrated. Remaining work includes selecting the controller, radio,
-        and suitable circuit-sensing components; assembling the module;
-        programming fault detection; establishing the reporting path; and
-        verifying that received information matches the simulated circuit
-        conditions. Security work will include planning device authentication
-        and protecting communication credentials.
+        Completed work includes the two earlier physical distribution
+        installations, updated presentation materials, and a proposed parts
+        list for the revised prototype. Arduino-based monitoring, LoRaWAN
+        reporting, and the off-tower module have not yet been demonstrated.
+        Remaining work includes confirming components, assembling the module,
+        programming fault detection, establishing the reporting path, and
+        testing normal operation, power loss, and recovery. Security work
+        will include exploring LoRaWAN authentication and protecting
+        communication credentials.
       </p>
 
       <h2>Proposed Timeline to Functionality</h2>
       <p>
-        During Week 2, my proposed focus is to finalize the demonstration scope,
-        select compatible components, confirm access to a LoRaWAN gateway and
-        supporting services, and begin assembling the test module. My target
-        for the end of Week 3 is a minimum working demonstration that detects
-        a simulated power circuit fault and transmits its status over LoRaWAN
-        to a receiving application where it can be viewed. This target depends
-        on component availability and successful integration. After the basic
-        demonstration works, I plan to refine the display, test repeated fault
-        and recovery conditions, and document the results with photographs
-        and video.
+        The earlier Week 3 functionality target has been revised. My Week 4
+        target is to confirm components, assemble the 12V module, and develop
+        the monitoring and reporting functions. Testing will verify that
+        switching off the main supply produces a received fault report while
+        the UPS keeps the controller and sensors operating. After successful
+        testing, I will record the demonstration and update the documentation.
+        Completion depends on parts availability and successful integration.
+        The current brief video presents the project update; a video showing
+        verified prototype functionality remains pending.
       </p>
 
       <h2>Previous Field Installations</h2>
@@ -189,13 +219,14 @@
 
       <h3>Revised Direction: Arduino and LoRaWAN</h3>
       <p>
-        The planned test module will use an Arduino-based controller to read
-        circuit-sensing inputs and identify simulated power faults. Compatible
-        LoRaWAN hardware will provide the wireless reporting connection.
-        The specific controller, sensing components, gateway, and receiving
-        application have not yet been selected. Testing will need to verify
-        the complete path from a circuit condition at the module to a visible
-        status update in the receiving application.
+        The planned 12V test module will use an Arduino-based controller to
+        monitor two demonstration circuits. Compatible LoRaWAN hardware will
+        transmit circuit status and fault information through a gateway to
+        a receiving application. A proposed parts list identifies candidate
+        components, but final selections and configuration remain pending.
+        Testing will verify the complete reporting path, including power
+        loss and recovery. This work will also allow me to explore LoRaWAN
+        networking and its associated security protocols.
       </p>
 
       <h3>Previous Cellular Concept</h3>
@@ -210,27 +241,53 @@
       </p>
 
       <h3>Power Supply Planning</h3>
-      <img
-        src="SPM.png"
-        alt="Solar power manager considered during earlier power supply planning"
-        class="project-image">
       <p>
-        The earlier design considered solar charging and a separate battery
-        supply for the monitoring system. Power requirements will be reassessed
-        for the Arduino and LoRaWAN configuration before selecting a battery
-        capacity or charging system. The initial test module will focus on
-        demonstrating circuit monitoring and reporting. Outage reporting would
-        also require the gateway and supporting communication services to remain
-        available.
+        The current prototype will use a main 12V DC supply for the
+        demonstration circuits. A separate small UPS will support only
+        the Arduino and sensing electronics. This arrangement will allow
+        monitoring to continue when the main supply is switched off.
+        The LoRaWAN gateway and supporting network services must remain
+        powered and available to receive the outage report.
       </p>
 
-      <h2>SIP Brief</h2>
+      <img
+        src="SPM.png"
+        alt="Solar power manager from an earlier design concept"
+        class="project-image">
       <p>
-        The embedded document below is the previously published SIP Brief.
-        A revised version with dated and highlighted progress is pending.
-        It needs to include the job change, loss of access to the field
-        installations, off-tower module, Arduino and LoRaWAN design direction,
-        and updated timeline.
+        This image documents the earlier solar power concept. Solar charging
+        is no longer part of the current prototype design.
+      </p>
+
+      <h2 id="current-sip-brief">Current SIP Brief Video</h2>
+      <p>
+        This September 30, 2026 update covers the project purpose, completed
+        work, revised prototype design, and planned demonstration.
+      </p>
+
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/cqMiUOfy-Ek"
+        title="Current SIP Brief by Caleb Quisenberry"
+        class="video-frame"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+
+      <p>
+        <a
+          href="https://youtu.be/cqMiUOfy-Ek"
+          target="_blank"
+          rel="noopener noreferrer">
+          Watch the current SIP brief on YouTube
+        </a>
+      </p>
+
+      <h3>Previous Written SIP Brief</h3>
+      <p>
+        The PDF below preserves the earlier written SIP Brief. It does not
+        reflect every current design change and requires a separate revision.
+        It remains available here to document the project's development.
       </p>
 
       <iframe
@@ -271,8 +328,6 @@
           alt="Watch the earlier design prototype video"
           class="video-thumbnail">
       </a>
-
-      
     </section>
   </main>
 
