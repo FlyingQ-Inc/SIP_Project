@@ -5,12 +5,13 @@ This repository contains the website and supporting materials for my Student Inn
 **Author:** Caleb Quisenberry  
 **Course:** SIP408, SIP Documentation  
 **Status:** Physical distribution concepts previously deployed; revised monitoring prototype planned  
-**Last updated:** September 20, 2026
+**Last updated:** September 30, 2026
 
 ## Project Website
 
 - [Home](https://flyingq-inc.github.io/SIP_Project/index.html)
 - [SIP Documentation and Progress](https://flyingq-inc.github.io/SIP_Project/sip.html)
+- [Current SIP Brief Video](https://youtu.be/cqMiUOfy-Ek)
 
 ## Project Overview
 
@@ -48,52 +49,64 @@ The revised monitoring design will use:
 
 - An **Arduino-based controller** for circuit monitoring and fault detection.
 - Compatible **LoRaWAN hardware** for wireless status reporting.
-- Circuit-sensing components selected for the demonstration.
-- A gateway and supporting services to deliver readings to a receiving application.
+- Two **12V DC demonstration circuits** with voltage and current sensing.
+- A **small UPS dedicated to the controller and sensors**.
+- A separately powered gateway and supporting services to deliver readings to a receiving application.
 
-The earlier Raspberry Pi and cellular communication concept has been replaced by this planned approach. Specific hardware and software selections remain to be finalized.
+The earlier Raspberry Pi and cellular communication concept has been replaced by this planned approach. Solar power is no longer part of the design. A proposed parts list has been developed, but final component selection and software configuration remain to be completed.
 
-## Progress Update: September 20, 2026
+## Progress Update: September 30, 2026
 
-No additional construction or testing has been completed since the previous course module. This update reflects changes in project direction and planned work.
+> [!IMPORTANT]
+> **The current SIP brief video is available:** [Watch on YouTube](https://youtu.be/cqMiUOfy-Ek).
+>
+> Recent progress includes an updated speech, presentation materials, a proposed parts list, and a concept rendering of the test module. The rendering illustrates the planned layout and does not show a completed build.
+>
+> The prototype will use 12V DC with UPS backup for monitoring only. Assembly, programming, and functionality testing remain pending.
 
-The primary setback is the loss of access to the two original installations. Building a standalone test module will provide an accessible platform for continued development, testing, and presentation.
+The primary setback remains the loss of access to the two original installations. Building a standalone test module will provide an accessible platform for continued development, testing, and presentation.
 
-Solar and battery power were considered in the earlier design. Their role will be reevaluated after the revised hardware and power requirements are established. Reporting during a site outage remains an unverified design goal.
+For the planned demonstration, a switch will disconnect the main 12V supply while the UPS keeps the Arduino and sensors operating. This will allow the monitoring system to detect and report the power loss. The LoRaWAN gateway will remain separately powered.
+
+The revised design also provides an opportunity to explore LoRaWAN networking, device authentication, and protection of communication credentials.
 
 ## Planned Minimum Demonstration
 
 The initial demonstration will aim to:
 
-1. Represent a monitored power circuit in the off-tower module.
-2. Detect a simulated circuit fault using the Arduino-based controller.
-3. Transmit the circuit status over LoRaWAN.
-4. Display the received status in an application.
-5. Detect and report recovery when the circuit returns to its normal state.
+1. Show normal operation of the two monitored 12V circuits.
+2. Use a switch to turn off the main supply.
+3. Keep the controller and sensors operating through the UPS.
+4. Transmit the outage status over LoRaWAN.
+5. Display the received status in an application.
+6. Restore power and verify a recovery report.
 
-This demonstration has not yet been completed.
+This demonstration has not yet been completed. The current SIP brief video explains the project and planned functionality.
 
 ## Proposed Development Timeline
 
+The earlier Week 3 functionality target has been revised to reflect the remaining work and component availability.
+
 | Stage | Planned Work | Completion Target |
 |---|---|---|
-| Design and selection | Define the demonstration scope, select components, and confirm gateway and service requirements. | Week 2 |
-| Assembly and programming | Assemble the test module and develop basic sensing and reporting functions. | Week 2 through Week 3 |
-| Initial functionality | Demonstrate detection and transmission of a simulated circuit fault. | End of Week 3 |
-| Validation and documentation | Test fault and recovery conditions, record results, and update presentation materials. | Following initial functionality |
+| Design and selection | Confirm components, UPS requirements, and gateway arrangements. | Week 4 |
+| Assembly and programming | Assemble the 12V test module and develop sensing and reporting functions. | Week 4, subject to parts availability |
+| Initial functionality | Verify outage detection and LoRaWAN reporting while monitoring runs on UPS power. | After assembly and integration |
+| Validation and documentation | Test fault and recovery conditions, record the functioning prototype, and update documentation. | Following successful functionality testing |
 
 This timeline is a target and depends on component availability and successful integration.
 
 ## Remaining Work
 
-- Finalize the controller, LoRaWAN hardware, and circuit-sensing components.
+- Finalize the controller, LoRaWAN hardware, circuit sensors, and UPS.
 - Build the off-tower test and display module.
 - Program circuit monitoring and fault detection.
 - Establish the LoRaWAN reporting path and receiving application.
 - Plan device authentication and secure handling of communication credentials.
+- Verify that monitoring remains operational when the main supply is switched off.
 - Test normal, fault, and recovery conditions.
 - Update diagrams to match the revised design.
-- Revise the SIP Brief with dated and highlighted progress.
+- Revise the written SIP Brief with dated and highlighted progress.
 - Capture photographs and video of the functioning prototype.
 
 ## Website Contents
@@ -111,9 +124,11 @@ The website uses HTML and CSS and is published through GitHub Pages.
 
 ## Documentation Notes
 
-Earlier diagrams, photographs, and videos are retained to show the project's development history. Some materials describe the previous cellular design and may not reflect the current Arduino and LoRaWAN direction.
+Earlier diagrams, photographs, and videos are retained to show the project's development history. Some materials describe the previous cellular and solar concepts and may not reflect the current Arduino, LoRaWAN, and UPS design.
 
-The embedded SIP Brief is a separate PDF. Updating the website or this README does not revise that document.
+The [current SIP brief video](https://youtu.be/cqMiUOfy-Ek) presents the latest project update. The earlier written SIP Brief remains a separate PDF and requires its own revision.
+
+Concept images illustrate proposed designs. Photographs and test results will document the completed prototype when available.
 
 ## Feedback
 
