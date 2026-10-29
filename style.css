@@ -10,5 +10,16 @@ img{max-width:100%;height:auto;border-radius:10px}iframe{max-width:100%;border-r
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:1rem;margin-top:1.5rem}.tile{display:block;text-decoration:none;color:inherit;background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:1.35rem;transition:transform .15s,border-color .15s}.tile:hover{transform:translateY(-3px);border-color:var(--accent);color:inherit}.tile h3{color:#fff;margin:.2rem 0}.tile p{color:var(--muted)}
 .tag{display:inline-block;background:#24485b;color:#b8f2fa;border-radius:99px;padding:.15rem .65rem;font-size:.8rem;font-weight:700}.objective{border-top:1px solid var(--line);padding:1.2rem 0}.objective:first-of-type{border-top:0}.objective h3{margin:.1rem 0 .5rem}.objective p{color:var(--muted)}.note{border-left:4px solid var(--gold);background:#29313a;border-radius:4px;padding:1rem 1.25rem}.profile-image{width:min(100%,560px);display:block;margin:1.5rem 0 .5rem}.project-image{display:block;max-width:800px;width:100%;margin:1rem 0}
 .progress-update{background:#292d30!important;color:#f8eee0!important;border-left:5px solid var(--gold)!important}.progress-update p{color:#f8eee0!important}.progress-update mark{background:#64532a!important;color:#fff!important}.progress-update a{color:#b0eeff!important}
+.sip-page .sip-intro{background:linear-gradient(140deg,#17344a,#102132)}
+.sip-page .sip-intro>p:first-of-type{font-size:1.12rem;color:#d6e5ee}
+.sip-page .sip-jump-nav{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.4rem 0 1.2rem}
+.sip-page .sip-jump-nav a{background:#24485b;color:#d4f6fd;border:1px solid #47738a;border-radius:8px;padding:.45rem .8rem;text-decoration:none;font-weight:700;font-size:.9rem}
+.sip-page .sip-jump-nav a:hover{background:#35627a;color:#fff}
+.sip-page .sip-section{scroll-margin-top:1rem}
+.sip-page .sip-section h2{margin-top:1rem}
+.sip-page .sip-section h3{color:#a7e2f0}
+.sip-page .progress-update{border-radius:10px;background:#253743!important;border:1px solid #486171!important;border-left:5px solid var(--gold)!important;box-shadow:none!important;margin-top:1.5rem}
+.sip-page .progress-update mark{background:transparent!important;color:#f5dfaa!important;font-weight:700}
+.sip-page .project-image,.sip-page .video-frame,.sip-page .brief-frame{border:1px solid var(--line);border-radius:10px}
 footer{background:#0c1b2b;border-top:1px solid var(--line);padding:1.6rem 1.25rem;text-align:center;color:var(--muted)}footer p{display:inline;margin:0 1rem}
 @media(max-width:650px){header{padding:1.1rem}nav ul{gap:.1rem}nav a{padding:.4rem .55rem}main{width:calc(100% - 1.25rem);margin:1rem auto 2rem}section{padding:1.2rem}footer p{display:block;margin:.5rem}}
