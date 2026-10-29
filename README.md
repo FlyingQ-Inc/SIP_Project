@@ -1,17 +1,28 @@
 # Intelligent Tower Mounted Distribution Node
 
-This repository contains the website and supporting materials for my Student Innovation Project at the University of Advancing Technology. The project supports my studies in Network Engineering and Cybersecurity.
+This repository contains my University of Advancing Technology (UAT) technical portfolio, Boards pages, and Student Innovation Project (SIP) documentation. It supports my dual bachelor's degree programs in Network Engineering and Cybersecurity. The website is also being organized for the larger SIP411 portfolio effort.
 
 **Author:** Caleb Quisenberry  
-**Course:** SIP408, SIP Documentation  
+**Coursework:** SIP408 documentation and continuing SIP/Boards portfolio development  
 **Status:** Physical distribution concepts previously deployed; revised monitoring prototype planned  
-**Last updated:** September 30, 2026
+**Website status:** Published through GitHub Pages  
+**Last updated:** October 28, 2026
 
 ## Project Website
 
 - [Home](https://flyingq-inc.github.io/SIP_Project/index.html)
+- [Boards Overview](https://flyingq-inc.github.io/SIP_Project/boards.html)
+- [Network Engineering Objectives](https://flyingq-inc.github.io/SIP_Project/network-engineering.html)
+- [Network Security Objectives](https://flyingq-inc.github.io/SIP_Project/network-security.html)
 - [SIP Documentation and Progress](https://flyingq-inc.github.io/SIP_Project/sip.html)
+- [Projects](https://flyingq-inc.github.io/SIP_Project/projects.html)
 - [Current SIP Brief Video](https://youtu.be/cqMiUOfy-Ek)
+
+## Portfolio Structure
+
+The website uses a shared dark-blue visual theme and consistent navigation across the main pages. The Boards area separates Network Engineering and Network Security objectives so supporting evidence can be added to the appropriate degree pathway.
+
+The objective pages currently contain available objective wording and clearly identified placeholders for wording that still needs to be confirmed. Supporting assignments will be linked once the complete coursework collection and holistic review are ready. The SIP page retains the history of previous field installations while distinguishing them from the revised prototype that remains under development.
 
 ## Project Overview
 
@@ -109,18 +120,32 @@ This timeline is a target and depends on component availability and successful i
 - Revise the written SIP Brief with dated and highlighted progress.
 - Capture photographs and video of the functioning prototype.
 
-## Website Contents
+## Website Files and Navigation
 
 | Page | Purpose |
 |---|---|
-| `index.html` | Introduction and project website entry point |
-| `sip.html` | Innovation claim, development progress, visuals, SIP Brief, and videos |
-| `boards.html` | Boards materials |
+| `index.html` | Portfolio introduction and entry point for the Boards, SIP, and projects |
+| `sip.html` | Innovation claim, development status, field iterations, monitoring design, SIP Brief, and videos |
+| `boards.html` | Overview linking the two degree pathways and portfolio status |
+| `network-engineering.html` | Network Engineering degree objectives and evidence placeholders |
+| `network-security.html` | Network Security degree objectives and evidence placeholders |
 | `projects.html` | Additional project work |
 | `links.html` | References and supporting links |
 | `contact.html` | Contact information |
+| `style.css` | Shared responsive theme, navigation, panels, and SIP-specific layouts |
+| `site.js` | Shared navigation generated consistently across the pages |
 
-The website uses HTML and CSS and is published through GitHub Pages.
+The website is a static HTML, CSS, and JavaScript site published through GitHub Pages from the `main` branch. It does not require a build system or external framework.
+
+### Making Website Changes
+
+1. Create a development branch from `main`.
+2. Edit the relevant HTML and shared styles while preserving working links and existing media.
+3. Preview the site locally or in GitHub Codespaces. For example, run `python3 -m http.server 8000` from the repository directory and open the forwarded port.
+4. Open and review a pull request, then merge approved changes into `main`.
+5. Wait for the GitHub Pages deployment to finish and verify the published pages.
+
+GitHub Pages may cache stylesheets. When changing shared CSS, update the version parameter on the stylesheet links across affected pages so visitors receive the latest design.
 
 ## Documentation Notes
 
