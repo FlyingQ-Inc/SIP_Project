@@ -1,6 +1,51 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Network Security Boards | Caleb Quisenberry</title><link rel="stylesheet" href="style.css?v=20261028-2"><script defer src="site.js"></script></head>
-<body><header><h1>Network Security Boards</h1><nav><a href="boards.html">Boards Overview</a></nav></header><main><section><span class="eyebrow">Degree objectives</span><h2>Network Security</h2><p class="lead">This page is reserved for security degree objectives, with supporting evidence to be selected from the reviewed coursework.</p>
-<div class="objective"><h3>Objective 1</h3><p>Create a network infrastructure design communications document that includes identified hardware components, connections to the outside world, identified physical layer connectivity (media), and addressing, including operational and security components in the design.</p><span class="tag">Evidence pending</span></div>
-<div class="objective"><h3>Objective 2</h3><p>Install, configure and test security hardware and software tools with supporting documentation, including scanners, vulnerability detection, firewalls, hardening, patch management, and assessment.</p><span class="tag">Evidence pending</span></div>
-<div class="objective"><h3>Objectives 3 through 6</h3><p>Official objective wording is pending confirmation. Additional objective sections and their evidence will be added once verified.</p><span class="tag">Awaiting objective text</span></div>
+<body><header><h1>Network Security Boards</h1><nav><a href="boards.html">Boards Overview</a></nav></header><main><section><span class="eyebrow">Degree objectives</span><h2>Network Security</h2><p class="lead">Objectives 3 and 4 include project explanations and evidence summaries.</p>
+<div class="objective" id="objective-1">
+  <h3>Objective 1</h3>
+  <p>Create a network infrastructure design communications document that includes identified hardware components, connections to the outside world, identified physical layer connectivity (media) and addressing, including operational and security components in the design.</p>
+  <span class="tag">Evidence in development</span>
+</div>
+<div class="objective" id="objective-2">
+  <h3>Objective 2</h3>
+  <p>Install, configure and test security hardware and software tools with supporting documentation such as port scanners, vulnerability detection systems, intrusion detection systems, firewalls, system hardening, anti-virus tools, patch management, auditing and assessment.</p>
+  <span class="tag">Evidence in development</span>
+</div>
+<div class="objective" id="objective-3">
+  <h3>Objective 3</h3>
+  <p>Construct, implement and document a script or a program to automate a security-related process or other tasks such as installation, administration, management, mapping resources, logon scripts, patch management, updates, auditing, analysis and assessment.</p>
+  <div>
+    <h4>Project 1 · NTS370 Vulnerability Scanner</h4>
+    <p>I built a script that brings several parts of a security assessment into one repeatable process. It runs Nmap to identify services, looks up potential vulnerabilities in the National Vulnerability Database, and writes the results and remediation suggestions to a report. The dated scan report shows how the script turns service discovery into a list of findings I can follow up on. I treat database matches as leads and check them against the actual service version and configuration before calling them confirmed vulnerabilities.</p>
+    <p><strong>Evidence</strong> · Dated scan report, lines 5–50, covering discovered services, potential matches, and remediation suggestions. <a href="https://github.com/FlyingQ-Inc/final_project_scanner">View the scanner repository</a>.</p>
+  </div>
+  <div>
+    <h4>Project 2 · NTW216 Remote Patch Management with Ansible</h4>
+    <p>I used an Ansible playbook to automate package updates on a remote Linux host. The playbook put the update steps into a repeatable procedure that I could run without signing in and entering each command manually. The run recorded a change with zero failed or unreachable hosts, and my follow-up check showed no remaining upgradeable packages. Together, those results show both the patching action and how I verified its outcome.</p>
+    <p><strong>Evidence</strong> · Ansible recap: ok=2, changed=1, unreachable=0, failed=0. A subsequent package check listed no upgradeable packages.</p>
+  </div>
+</div>
+<div class="objective" id="objective-4">
+  <h3>Objective 4</h3>
+  <p>Create a policy or procedure that addresses events such as: a disaster recovery plan, a business continuity plan, an incident response policy, an acceptable usage document, an information security policy, a physical security policy, assessments or troubleshooting procedures.</p>
+  <div>
+    <h4>Project 1 · NTS336 AWS Disaster Recovery Plan</h4>
+    <p>I developed a disaster recovery plan that uses recovery time and recovery point objectives to guide decisions about backups and restoration. The recovery time objective helps determine how quickly a service needs to return, while the recovery point objective helps determine how much data loss the organization can tolerate. I used those considerations to explain why backup and recovery choices need to reflect the needs of the service, and I included a plan for validating that the recovery process could meet those needs.</p>
+    <p><strong>Evidence</strong> · Disaster recovery plan, pp. 3–6, covering backup planning, AWS recovery, and planned validation.</p>
+  </div>
+  <div>
+    <h4>Project 2 · NTW216 Business Continuity and Disaster Recovery Strategy</h4>
+    <p>I developed a continuity strategy that connects backup, replication, and recovery to the goal of keeping an organization operating through a disruption. I explained how backups provide a point to restore from and how replication can reduce the time needed to bring services back. That distinction gives the organization a basis for deciding what needs to be protected ahead of time and what needs to happen when a service goes down.</p>
+    <p><strong>Evidence</strong> · Continuity strategy, pp. 2–4, covering proposed AWS backup, replication, and recovery measures.</p>
+  </div>
+</div>
+<div class="objective" id="objective-5">
+  <h3>Objective 5</h3>
+  <p>Develop a research report or implementation plan concerning legal and ethical best practices and mandated requirements that pertain to information security.</p>
+  <span class="tag">Evidence in development</span>
+</div>
+<div class="objective" id="objective-6">
+  <h3>Objective 6</h3>
+  <p>Research, document, test and evaluate several current industry information security-based threats, risks, malicious activities, covert methodology, encryption technologies, mitigation techniques or unconventional tactics to prevent loss of sensitive information and data confidentiality, integrity and availability.</p>
+  <span class="tag">Evidence in development</span>
+</div>
 </section><p><a href="boards.html">← Return to Boards overview</a></p></main><footer><p>Caleb Quisenberry · UAT Boards Portfolio</p></footer></body></html>

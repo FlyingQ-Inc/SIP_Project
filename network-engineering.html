@@ -1,8 +1,51 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Network Engineering Boards | Caleb Quisenberry</title><link rel="stylesheet" href="style.css?v=20261028-2"><script defer src="site.js"></script></head>
-<body><header><h1>Network Engineering Boards</h1><nav><a href="boards.html">Boards Overview</a></nav></header><main><section><span class="eyebrow">Degree objectives</span><h2>Network Engineering</h2><p class="lead">Objectives are displayed separately from Network Security. Supporting assignments and explanations will be linked after the coursework review.</p>
-<div class="objective"><h3>Objective 1</h3><p>Translate physical and organizational needs into network designs that encompass logic and infrastructure.</p><span class="tag">Evidence pending</span></div>
-<div class="objective"><h3>Objective 2</h3><p>Implement, support, and evaluate routed and switched IP wired and wireless network infrastructure that reflects networking concepts and industry best practices.</p><span class="tag">Evidence pending</span></div>
-<div class="objective"><h3>Objective 3</h3><p>Produce visualizations and documentation related to network services.</p><span class="tag">Evidence pending</span></div>
-<div class="objective"><h3>Objective 4</h3><p>Select and architect the most appropriate network, information systems, and technologies to meet the requirements of specific projects and communicate these decisions clearly in written and oral form.</p><span class="tag">Evidence pending</span></div>
-<div class="objective"><h3>Objectives 5 and 6</h3><p>Official objective wording is pending confirmation.</p><span class="tag">Awaiting objective text</span></div>
+<body><header><h1>Network Engineering Boards</h1><nav><a href="boards.html">Boards Overview</a></nav></header><main><section><span class="eyebrow">Degree objectives</span><h2>Network Engineering</h2><p class="lead">Objectives 1 and 2 include project explanations and evidence summaries.</p>
+<div class="objective" id="objective-1">
+  <h3>Objective 1</h3>
+  <p>Analyze personal and organizational requirements and design an appropriate networking architecture.</p>
+  <div>
+    <h4>Project 1 · NTW275 Comprehensive Network Design</h4>
+    <p>I compared MPLS and SD-WAN against the needs of a multi-site organization, including security, performance, scalability, and redundancy. Those requirements gave me a way to judge how each WAN option would support day-to-day operations and future growth. I used that comparison to propose an architecture that addresses both how sites connect and how the network can continue to operate when a link is unavailable.</p>
+    <p><strong>Evidence</strong> · Comprehensive Network Design, pp. 2–3, Network Architecture and Addressing Operational Requirements.</p>
+  </div>
+  <div>
+    <h4>Project 2 · NTW275 HealthCo Server Infrastructure Plan</h4>
+    <p>I designed a hybrid infrastructure around a healthcare organization’s needs for authentication, storage, and database services. I used those needs to decide which functions the design would keep on an on-premises server and where cloud services could support the organization. This shows how I translated operational requirements into decisions about where services run and how the local and cloud environments work together.</p>
+    <p><strong>Evidence</strong> · HealthCo Server Infrastructure Plan, pp. 2–4, covering on-premises and cloud service placement.</p>
+  </div>
+</div>
+<div class="objective" id="objective-2">
+  <h3>Objective 2</h3>
+  <p>Develop cloud solutions emphasizing the benefits of remote infrastructure.</p>
+  <div>
+    <h4>Project 1 · NTW216 AWS EC2 Automation</h4>
+    <p>I adapted a Python script using Boto3 to launch an EC2 instance, check its state, and terminate it when I was finished. The lab screenshots show the instance running and later terminated. This demonstrates a practical benefit of remote infrastructure. I could provision computing capacity when I needed it, verify its state remotely, and release it through the same workflow. My lab report documents the changes I made to the script and credits the ChatGPT assistance I used.</p>
+    <p><strong>Evidence</strong> · Script Functionality section and screenshots showing the running and terminated instance states.</p>
+  </div>
+  <div>
+    <h4>Project 2 · NTS336 AWS Lambda Deployment and Testing</h4>
+    <p>I deployed an AWS Lambda function and used a test event to confirm that the code ran in AWS and returned the expected response. The test demonstrates how a task can run on demand without requiring me to provision and manage a server for it. The function was intentionally simple, which made it easy to verify the part of the workflow I was testing, from invoking the deployed function to receiving its output.</p>
+    <p><strong>Evidence</strong> · Testing the Function screenshot showing the expected hello, world! response.</p>
+  </div>
+</div>
+<div class="objective" id="objective-3">
+  <h3>Objective 3</h3>
+  <p>Identify networking misconfigurations and determine solutions to achieve optimal performance.</p>
+  <span class="tag">Evidence in development</span>
+</div>
+<div class="objective" id="objective-4">
+  <h3>Objective 4</h3>
+  <p>Demonstrate enterprise network administration through access controls, group policy, remote deployment, and backup recovery.</p>
+  <span class="tag">Evidence in development</span>
+</div>
+<div class="objective" id="objective-5">
+  <h3>Objective 5</h3>
+  <p>Create networking solutions that incorporate traditional networking, IoT, and mobile devices.</p>
+  <span class="tag">Evidence in development</span>
+</div>
+<div class="objective" id="objective-6">
+  <h3>Objective 6</h3>
+  <p>Demonstrate security principles within networking solutions based on industry standards.</p>
+  <span class="tag">Evidence in development</span>
+</div>
 </section><p><a href="boards.html">← Return to Boards overview</a></p></main><footer><p>Caleb Quisenberry · UAT Boards Portfolio</p></footer></body></html>
