@@ -1,0 +1,6 @@
+# Keep internal vault review notes and local credentials out of the public site.
+**/Objective Draft Follow-ups.md
+*.pem
+*.key
+.env
+.env.*

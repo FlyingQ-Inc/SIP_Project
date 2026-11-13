@@ -1,51 +1,83 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Network Engineering Boards | Caleb Quisenberry</title><link rel="stylesheet" href="style.css?v=20261028-2"><script defer src="site.js"></script></head>
-<body><header><h1>Network Engineering Boards</h1><nav><a href="boards.html">Boards Overview</a></nav></header><main><section><span class="eyebrow">Degree objectives</span><h2>Network Engineering</h2><p class="lead">Objectives 1 and 2 include project explanations and evidence summaries.</p>
-<div class="objective" id="objective-1">
-  <h3>Objective 1</h3>
-  <p>Analyze personal and organizational requirements and design an appropriate networking architecture.</p>
-  <div>
-    <h4>Project 1 · NTW275 Comprehensive Network Design</h4>
-    <p>I compared MPLS and SD-WAN against the needs of a multi-site organization, including security, performance, scalability, and redundancy. Those requirements gave me a way to judge how each WAN option would support day-to-day operations and future growth. I used that comparison to propose an architecture that addresses both how sites connect and how the network can continue to operate when a link is unavailable.</p>
-    <p><strong>Evidence</strong> · Comprehensive Network Design, pp. 2–3, Network Architecture and Addressing Operational Requirements.</p>
-  </div>
-  <div>
-    <h4>Project 2 · NTW275 HealthCo Server Infrastructure Plan</h4>
-    <p>I designed a hybrid infrastructure around a healthcare organization’s needs for authentication, storage, and database services. I used those needs to decide which functions the design would keep on an on-premises server and where cloud services could support the organization. This shows how I translated operational requirements into decisions about where services run and how the local and cloud environments work together.</p>
-    <p><strong>Evidence</strong> · HealthCo Server Infrastructure Plan, pp. 2–4, covering on-premises and cloud service placement.</p>
-  </div>
-</div>
-<div class="objective" id="objective-2">
-  <h3>Objective 2</h3>
-  <p>Develop cloud solutions emphasizing the benefits of remote infrastructure.</p>
-  <div>
-    <h4>Project 1 · NTW216 AWS EC2 Automation</h4>
-    <p>I adapted a Python script using Boto3 to launch an EC2 instance, check its state, and terminate it when I was finished. The lab screenshots show the instance running and later terminated. This demonstrates a practical benefit of remote infrastructure. I could provision computing capacity when I needed it, verify its state remotely, and release it through the same workflow. My lab report documents the changes I made to the script and credits the ChatGPT assistance I used.</p>
-    <p><strong>Evidence</strong> · Script Functionality section and screenshots showing the running and terminated instance states.</p>
-  </div>
-  <div>
-    <h4>Project 2 · NTS336 AWS Lambda Deployment and Testing</h4>
-    <p>I deployed an AWS Lambda function and used a test event to confirm that the code ran in AWS and returned the expected response. The test demonstrates how a task can run on demand without requiring me to provision and manage a server for it. The function was intentionally simple, which made it easy to verify the part of the workflow I was testing, from invoking the deployed function to receiving its output.</p>
-    <p><strong>Evidence</strong> · Testing the Function screenshot showing the expected hello, world! response.</p>
-  </div>
-</div>
-<div class="objective" id="objective-3">
-  <h3>Objective 3</h3>
-  <p>Identify networking misconfigurations and determine solutions to achieve optimal performance.</p>
-  <span class="tag">Evidence in development</span>
-</div>
-<div class="objective" id="objective-4">
-  <h3>Objective 4</h3>
-  <p>Demonstrate enterprise network administration through access controls, group policy, remote deployment, and backup recovery.</p>
-  <span class="tag">Evidence in development</span>
-</div>
-<div class="objective" id="objective-5">
-  <h3>Objective 5</h3>
-  <p>Create networking solutions that incorporate traditional networking, IoT, and mobile devices.</p>
-  <span class="tag">Evidence in development</span>
-</div>
-<div class="objective" id="objective-6">
-  <h3>Objective 6</h3>
-  <p>Demonstrate security principles within networking solutions based on industry standards.</p>
-  <span class="tag">Evidence in development</span>
-</div>
-</section><p><a href="boards.html">← Return to Boards overview</a></p></main><footer><p>Caleb Quisenberry · UAT Boards Portfolio</p></footer></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Network Engineering Boards | Caleb Quisenberry</title><link rel="stylesheet" href="style.css?v=20261113-evidence"><script defer src="site.js"></script></head>
+<body><header><h1>Network Engineering Boards</h1><nav><a href="boards.html">Boards Overview</a></nav></header>
+<main><section><span class="eyebrow">Degree objectives</span><h2>Network Engineering</h2>
+<p class="lead">Six objective entries connect my coursework and technical projects to the degree requirements, with supporting evidence for each.</p>
+<nav class="objective-nav" aria-label="Network Engineering objectives"><a href="#objective-1">Objective 1</a> <a href="#objective-2">Objective 2</a> <a href="#objective-3">Objective 3</a> <a href="#objective-4">Objective 4</a> <a href="#objective-5">Objective 5</a> <a href="#objective-6">Objective 6</a></nav>
+<p class="evidence-note">Evidence includes PDF views and downloadable files. Downloads are reviewed copies with private account and connection details redacted. The design presentation omits embedded recordings.</p>
+<article class="objective" id="objective-1">
+  <h3>Objective 1 · Requirements and networking architecture</h3>
+  <p class="objective-wording">Analyze personal and organizational requirements and design an appropriate networking architecture.</p>
+  <h4>My work and contribution</h4>
+  <p>I developed a network architecture proposal for a coursework scenario involving offices in New York, London, and Tokyo. I compared MPLS with SD-WAN and selected an SD-WAN-based hybrid approach based on cost and scalability considerations. I described core, distribution, and access functions, with proposed redundant edge routers and uplinks to address availability requirements.</p>
+  <p>For a healthcare infrastructure scenario, I mapped storage, email, web hosting, database, and authentication needs to a combination of AWS services and an on-premises Active Directory server. My contribution was to connect each organizational requirement to an infrastructure choice and explain the intended security, redundancy, and growth considerations. These proposals demonstrate requirements analysis and architecture design across both multi-site networking and hybrid server infrastructure.</p>
+  <h4>Supporting evidence</h4>
+  <ul class="evidence-list">
+    <li><strong>Network Design Proposal</strong> — pp. 2–3.<br><a href="assets/evidence/NTW275/NTW275_CQuisenberry_Wk2_CompNetDes.pdf">View PDF</a> · <a href="assets/evidence/NTW275/NTW275_CQuisenberry_Wk2_CompNetDes.docx" download>Download DOCX</a></li>
+    <li><strong>Server Infrastructure Plan</strong> — pp. 2–4.<br><a href="assets/evidence/NTW275/NTW275_CQuisenberry_Wk2_ServInfPl.pdf">View PDF</a> · <a href="assets/evidence/NTW275/NTW275_CQuisenberry_Wk2_ServInfPl.docx" download>Download DOCX</a></li>
+  </ul>
+</article>
+<article class="objective" id="objective-2">
+  <h3>Objective 2 · Cloud solutions and remote infrastructure</h3>
+  <p class="objective-wording">Develop cloud solutions emphasizing the benefits of remote infrastructure.</p>
+  <h4>My work and contribution</h4>
+  <p>I adapted and ran a Python/boto3 script in AWS CloudShell to launch an EC2 instance, report its details, and terminate it. I used ChatGPT assistance for the script and contributed the environment-specific image and key-pair settings and explanatory comments. I documented the running instance and the completed termination in both command output and the EC2 dashboard.</p>
+  <p>In a separate lab, I created a Lambda function from a supplied blueprint, configured a test event, and recorded a successful response. I also authored a hybrid-infrastructure proposal exploring cloud storage, remote workloads, scalability, and disaster recovery. My contribution combines hands-on cloud deployment and lifecycle verification with analysis of where remote infrastructure could benefit an organization. The labs demonstrate working cloud operations, while the hybrid proposal explains broader intended uses.</p>
+  <h4>Supporting evidence</h4>
+  <ul class="evidence-list">
+    <li><strong>Rapid Testing and Automation</strong> — Script Functionality, running and terminated-instance screenshots.<br><a href="assets/evidence/NTW216/NTW216_CQuisenberry_Wk5_RTA.pdf">View PDF</a> · <a href="assets/evidence/NTW216/NTW216_CQuisenberry_Wk5_RTA.docx" download>Download DOCX</a></li>
+    <li><strong>Serverless Applications with Lambda</strong> — test-event execution results.<br><a href="assets/evidence/NTS336/NTS336_CQuisenberry_Wk2_Lambda.pdf">View PDF</a> · <a href="assets/evidence/NTS336/NTS336_CQuisenberry_Wk2_Lambda.docx" download>Download DOCX</a></li>
+    <li><strong>Hybrid Network Infrastructure</strong> — pp. 2–4.<br><a href="assets/evidence/NTW275/NTW275_CQuisenberry_Wk5_HybNetInf.pdf">View PDF</a> · <a href="assets/evidence/NTW275/NTW275_CQuisenberry_Wk5_HybNetInf.docx" download>Download DOCX</a></li>
+  </ul>
+</article>
+<article class="objective" id="objective-3">
+  <h3>Objective 3 · Misconfigurations and performance solutions</h3>
+  <p class="objective-wording">Identify networking misconfigurations and determine solutions to achieve optimal performance.</p>
+  <h4>My work and contribution</h4>
+  <p>I evaluated a segment of two telecommunications networks being combined after an acquisition. I identified reliance on wireless backhaul and an expensive leased uplink site as constraints on the proposed combined network. I then developed an optimization proposal that consolidates coverage, moves customers to selected remaining sites, and adds fiber connections to Dewey and North Cherry.</p>
+  <p>My contribution was to analyze the existing layout, document an alternative design, and explain the expected performance and operating-cost benefits. I also considered migration risks, construction costs, and the need to verify that the remaining sites could support the additional customers. This work demonstrates the performance-analysis and solution-design portions of the objective through a documented network optimization proposal.</p>
+  <h4>Supporting evidence</h4>
+  <ul class="evidence-list">
+    <li><strong>Network Design Evaluation</strong> — pp. 2–7, Opportunities for Optimization and Optimization Strategies.<br><a href="assets/evidence/NTW275/NTW275_CQuisenberry_Wk5_NetDesEval.pdf">View PDF</a> · <a href="assets/evidence/NTW275/NTW275_CQuisenberry_Wk5_NetDesEval.docx" download>Download DOCX</a></li>
+  </ul>
+</article>
+<article class="objective" id="objective-4">
+  <h3>Objective 4 · Enterprise network administration</h3>
+  <p class="objective-wording">Demonstrate enterprise network administration through access controls, group policy, remote deployment, and backup recovery.</p>
+  <h4>My work and contribution</h4>
+  <p>I completed an AWS IAM lab in which I created two users and documented group membership and the administrator-group setup workflow. I explained how users, groups, and policies organize access to cloud resources.</p>
+  <p>I also launched three EC2 instances and configured an Ansible inventory and playbook for remote package management. I resolved SSH-key location problems and changed the playbook from apt to yum to match Amazon Linux. The recorded run reached all three hosts and completed without failures, reporting no changes for that run. In a separate Ubuntu lab, I corrected the remote-user setting and documented an update run with one changed task, followed by a check showing no upgradeable packages. My contribution demonstrates cloud identity administration and remote management across multiple hosts, including troubleshooting and verification of automation results.</p>
+  <h4>Supporting evidence</h4>
+  <ul class="evidence-list">
+    <li><strong>IAM Users and Groups</strong> — pp. 2–3.<br><a href="assets/evidence/NTS336/NTS336_CQuisenberry_Wk1_IAM.pdf">View PDF</a> · <a href="assets/evidence/NTS336/NTS336_CQuisenberry_Wk1_IAM.docx" download>Download DOCX</a></li>
+    <li><strong>Using Ansible to Update AWS Instances</strong> — EC2 setup, SSH configuration, and play recap.<br><a href="assets/evidence/NTS336/NTS336_CQuisenberry_Wk5_Final.pdf">View PDF</a> · <a href="assets/evidence/NTS336/NTS336_CQuisenberry_Wk5_Final.docx" download>Download DOCX</a></li>
+    <li><strong>DevOps Basics with Ansible and AWS</strong> — Configuration and Communication; Verification.<br><a href="assets/evidence/NTW216/NTW216_CQuisenberry_Wk3_Ans.pdf">View PDF</a> · <a href="assets/evidence/NTW216/NTW216_CQuisenberry_Wk3_Ans.docx" download>Download DOCX</a></li>
+  </ul>
+</article>
+<article class="objective" id="objective-5">
+  <h3>Objective 5 · Traditional networking, IoT and mobile devices</h3>
+  <p class="objective-wording">Create networking solutions that incorporate traditional networking, IoT, and mobile devices.</p>
+  <h4>My work and contribution</h4>
+  <p>I developed a tower-mounted distribution project to address cabling and expansion needs at fixed-wireless sites. I completed two field installations: the first prototype provided fiber distribution, and the second added power distribution. My contribution was to develop and install the physical distribution approach and refine it between iterations.</p>
+  <p>I then designed a monitoring extension to connect the physical infrastructure to remote fault reporting. The earlier concept proposed a Raspberry Pi and LTE connection for email and SMS alerts. My later prototype plan uses a 12-volt Arduino/LoRaWAN approach with backup power and a separately powered gateway. I documented the design progression in presentations and project briefs. The work demonstrates completed physical-network prototyping and a proposed IoT monitoring architecture, with mobile notification included in the earlier design.</p>
+  <h4>Supporting evidence</h4>
+  <ul class="evidence-list">
+    <li><strong>SIP pitch presentation</strong> — slide 8, field prototypes.<br><a href="assets/evidence/SIP311/Quisenberry_Caleb_SIP311_Pitch.pdf">View PDF</a> · <a href="assets/evidence/SIP311/Quisenberry_Caleb_SIP311_Pitch.pptx" download>Download PPTX</a></li>
+    <li><strong>SIP One Minute Speech</strong> — completed installations and planned LoRaWAN prototype.<br><a href="assets/evidence/SIP408_409/Quisenberry_SIP_One_Minute_Speech.pdf">View PDF</a> · <a href="assets/evidence/SIP408_409/Quisenberry_SIP_One_Minute_Speech.docx" download>Download DOCX</a></li>
+    <li><strong>SIP innovation brief</strong> — pp. 2–3, earlier monitoring and notification concept.<br><a href="assets/evidence/SIP311/Quisenberry_Caleb_SIP_Innovation_Brief_Final.pdf">View PDF</a> · <a href="assets/evidence/SIP311/Quisenberry_Caleb_SIP_Innovation_Brief_Final.docx" download>Download DOCX</a></li>
+    <li><strong>SIP design and prototype presentation</strong> — slide 6 notes, design-phase representation.<br><a href="assets/evidence/COM226/Quisenberry_Caleb_SIP311_Design_Prototype.pdf">View PDF</a> · <a href="assets/evidence/COM226/Quisenberry_Caleb_SIP311_Design_Prototype.pptx" download>Download PPTX</a></li>
+  </ul>
+</article>
+<article class="objective" id="objective-6">
+  <h3>Objective 6 · Standards-based network security</h3>
+  <p class="objective-wording">Demonstrate security principles within networking solutions based on industry standards.</p>
+  <h4>My work and contribution</h4>
+  <p>I authored a cybersecurity implementation plan that used NIST guidance to organize proposed networking security improvements for a communications provider. I included BGP route-origin validation using RPKI in the proposed routing-security approach and used the Cybersecurity Framework functions described in the paper to structure risk management, protection, detection, response, and recovery planning.</p>
+  <p>In a separate AWS lab, I created security-group rules that distinguish public web access from restricted administrative access. My contribution was to explain standards-informed security choices in the plan and configure a concrete network access-control example in the lab. These artifacts demonstrate security planning based on named industry guidance alongside practical firewall-rule configuration.</p>
+  <h4>Supporting evidence</h4>
+  <ul class="evidence-list">
+    <li><strong>Cybersecurity Implementation Plan</strong> — pp. 9–10, NIST CSF and proposed routing controls.<br><a href="assets/evidence/NTS435/NTS435_CQuisenberry_Wk5_CIP.pdf">View PDF</a> · <a href="assets/evidence/NTS435/NTS435_CQuisenberry_Wk5_CIP.docx" download>Download DOCX</a></li>
+    <li><strong>Configuring Firewall Rules in AWS</strong> — p. 3, security-group rules.<br><a href="assets/evidence/NTS336/NTS336_CQuisenberry_Wk2_Firewall.pdf">View PDF</a> · <a href="assets/evidence/NTS336/NTS336_CQuisenberry_Wk2_Firewall.docx" download>Download DOCX</a></li>
+  </ul>
+</article>
+</section><p><a href="boards.html">← Return to Boards overview</a></p></main>
+<footer><p>Caleb Quisenberry · UAT Boards Portfolio</p></footer></body></html>
