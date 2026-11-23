@@ -1,174 +1,122 @@
 # Intelligent Tower Mounted Distribution Node
 
-This repository contains my University of Advancing Technology (UAT) technical portfolio, Boards pages, and Student Innovation Project (SIP) documentation. It supports my dual bachelor's degree programs in Network Engineering and Cybersecurity. The website is also being organized for the larger SIP411 portfolio effort.
-
+**Student Innovation Project (SIP) and technical portfolio**  
 **Author:** Caleb Quisenberry  
-**Coursework:** SIP408 documentation and continuing SIP/Boards portfolio development  
-**Status:** Physical distribution concepts previously deployed; revised monitoring prototype planned  
-**Website status:** Published through GitHub Pages  
-**Last updated:** October 28, 2026
+**University:** University of Advancing Technology (UAT)  
+**Programs:** Network Engineering and Cybersecurity  
+**SIP subject matter expert:** Professor Aaron Rodriguez  
+**Current status:** Working off-tower monitoring and notification prototype demonstrated and tested on November 22, 2026
 
-## Project Website
+This repository publishes my SIP documentation alongside my UAT Boards portfolio and selected professional projects. The SIP is based on real fixed wireless deployment problems: distributing fiber and DC power to tower-mounted equipment and identifying individual power faults without unnecessary diagnostic visits.
+
+## Website and videos
 
 - [Home](https://flyingq-inc.github.io/SIP_Project/index.html)
-- [Boards Overview](https://flyingq-inc.github.io/SIP_Project/boards.html)
-- [Network Engineering Objectives](https://flyingq-inc.github.io/SIP_Project/network-engineering.html)
-- [Network Security Objectives](https://flyingq-inc.github.io/SIP_Project/network-security.html)
-- [SIP Documentation and Progress](https://flyingq-inc.github.io/SIP_Project/sip.html)
+- [SIP documentation and revised brief](https://flyingq-inc.github.io/SIP_Project/sip.html)
+- [Boards overview](https://flyingq-inc.github.io/SIP_Project/boards.html)
+- [Network Engineering objectives](https://flyingq-inc.github.io/SIP_Project/network-engineering.html)
+- [Network Security objectives](https://flyingq-inc.github.io/SIP_Project/network-security.html)
 - [Projects](https://flyingq-inc.github.io/SIP_Project/projects.html)
-- [Current SIP Brief Video](https://youtu.be/cqMiUOfy-Ek)
+- [Working prototype technical walkthrough](https://youtu.be/4rTvz5r6Yhw)
+- [Earlier SIP brief video](https://youtu.be/cqMiUOfy-Ek)
 
-## Portfolio Structure
+**Note:** The working-prototype walkthrough is technical demonstration footage, not the separate required five-minute SIP409 Showcase presentation. That final Showcase video will be linked when it is published.
 
-The website uses a shared dark-blue visual theme and consistent navigation across the main pages. The Boards area separates Network Engineering and Network Security objectives so supporting evidence can be added to the appropriate degree pathway.
+All website links now use **the current browser tab**, including the academic evidence links and externally hosted resources. The browser's Back button returns to the portfolio.
 
-The objective pages currently contain available objective wording and clearly identified placeholders for wording that still needs to be confirmed. Supporting assignments will be linked once the complete coursework collection and holistic review are ready. The SIP page retains the history of previous field installations while distinguishing them from the revised prototype that remains under development.
+## Problem and innovation
 
-## Project Overview
+Fixed wireless sites may require separate fiber and DC power cables for each tower-mounted base node. As more equipment is installed, cabling and troubleshooting become more complex.
 
-Fixed wireless installations require power and fiber connections for multiple tower-mounted radios. Individual cable runs can increase installation costs, consume tower space, and complicate maintenance and expansion.
+The project joins two related developments:
 
-The Intelligent Tower Mounted Distribution Node combines fiber distribution and DC power protection and distribution into a modular assembly near the radios. The next development phase will add circuit monitoring and wireless fault reporting to help technicians identify power problems from the ground.
+1. **Modular power and fiber distribution:** Two previously field-deployed iterations provided fiber distribution, then DC power distribution and protection closer to the radios. In the second iteration, the design eliminated the need for up to six individual copper runs along the full tower span.
+2. **Circuit monitoring and remote notifications:** A newly assembled, off-tower low-voltage prototype detects circuit faults and recoveries, sends LoRaWAN telemetry, logs it locally, and generates email notifications.
 
-## Innovation Goals
+The distribution installations demonstrate the physical tower concept. The off-tower monitoring prototype demonstrates the new telemetry and notification subsystem. They should not be mistaken for a single fully integrated, production-ready installation.
 
-- Reduce individual cable runs along the tower.
-- Improve the organization of power and fiber connections.
-- Simplify future site expansion.
-- Monitor power circuits and report fault conditions.
-- Reduce unnecessary tower climbs for power diagnostics.
+## Completed monitoring prototype
 
-These goals combine previously implemented distribution features with monitoring capabilities that remain under development.
+The prototype monitors **Incoming**, **Load 1**, and **Load 2** with three INA219 voltage/current sensors attached by I²C to an Arduino MKR WAN 1310.
 
-## Completed Development
+```text
+Three INA219 sensors -> I2C -> Arduino MKR WAN 1310
+  -> LoRaWAN -> RAK gateway (built-in network server)
+  -> direct Ethernet / MQTT -> Python monitoring service
+  -> SQLite records -> Gmail SMTP -> notification recipient
+```
 
-### First Iteration: Fiber Distribution
+### Implemented design
 
-The first field installation provided fiber distribution near the fixed wireless base nodes, improving cable organization and supporting future expansion.
+| Component | Implementation |
+| --- | --- |
+| Sensors | Three INA219 devices at I²C addresses 0x40, 0x41, 0x44 |
+| Controller | Arduino MKR WAN 1310 |
+| Fault/recovery detection | A change is confirmed after three qualifying samples |
+| Radio | US915 sub-band 2, channels 8–15 and 65, OTAA, LoRaWAN Class A |
+| Telemetry | 28-byte port-10 payload with voltage, current, status, boot ID, sequence, and uptime |
+| Heartbeat | Every 60 seconds, plus event-driven circuit state changes |
+| Local forwarding | Gateway built-in server to Ethernet/MQTT, port 1883, QoS 1 |
+| Receiver | Python service with SQLite persistence, notification queue, reconnect handling, duplicate-alert suppression |
+| Email transport | Gmail SMTP, port 587, authenticated with certificate-verified STARTTLS |
+| Power arrangement | UPS supports monitoring during the demonstrated input-power interruption |
 
-### Second Iteration: Power Distribution and Protection
+The LoRaWAN server is local to the gateway and does not require a cloud LoRaWAN service for radio telemetry. Delivering email still requires the receiving computer to have an internet connection.
 
-The second installation added DC circuit protection and power distribution. This design eliminated the need for up to six individual copper runs along the full tower span.
+## Final prototype demonstration and test evidence
 
-Photographs and earlier project videos document these installations. They demonstrate the physical distribution concept, not the planned monitoring and reporting functions.
+On November 22, 2026, all three physical fault and recovery tests passed, and alert emails were received. The email exports document the following **separate** fault and normal-state records:
 
-## Current Direction
+| Monitored circuit | Fault voltage | Normal-state voltage |
+| --- | --- | --- |
+| Incoming | 5.57 V | 11.89 V |
+| Load 1 | 5.58 V | 11.89 V |
+| Load 2 | 5.56 V | 11.88 V |
 
-Following a job change, I no longer have access to the original field installations. Further development will use an **off-tower test and display module** that can support controlled testing and project demonstrations.
+The recorded normal-state emails have earlier timestamps than the fault emails. These particular PDF records therefore must **not** be interpreted as a chronological fault-then-recovery sequence. A further message documented loss of monitoring data for at least three minutes and thirty seconds.
 
-The revised monitoring design will use:
+### PDF notification records
 
-- An **Arduino-based controller** for circuit monitoring and fault detection.
-- Compatible **LoRaWAN hardware** for wireless status reporting.
-- Two **12V DC demonstration circuits** with voltage and current sensing.
-- A **small UPS dedicated to the controller and sensors**.
-- A separately powered gateway and supporting services to deliver readings to a receiving application.
+These seven public PDF files are **redacted reproductions transcribed from the received Gmail PDF exports**, not byte-for-byte copies of the original Gmail printouts. They preserve the reported status, readings, time, and event ID while omitting personal Gmail addresses and private message URLs.
 
-The earlier Raspberry Pi and cellular communication concept has been replaced by this planned approach. Solar power is no longer part of the design. A proposed parts list has been developed, but final component selection and software configuration remain to be completed.
+| Notification | PDF record |
+| --- | --- |
+| Incoming fault, event 29 | [Open PDF](assets/sip-evidence/incoming-fault.pdf) |
+| Incoming normal state, event 26 | [Open PDF](assets/sip-evidence/incoming-restored.pdf) |
+| Load 1 fault, event 30, marked FORMAT PREVIEW in source | [Open PDF](assets/sip-evidence/load-1-fault-format-preview.pdf) |
+| Load 1 normal state, event 27 | [Open PDF](assets/sip-evidence/load-1-restored.pdf) |
+| Load 2 fault, event 31 | [Open PDF](assets/sip-evidence/load-2-fault.pdf) |
+| Load 2 normal state, event 28 | [Open PDF](assets/sip-evidence/load-2-restored.pdf) |
+| Monitoring connection lost, event 32 | [Open PDF](assets/sip-evidence/monitor-connection-lost.pdf) |
 
-## Progress Update: September 30, 2026
+The source Gmail exports also contain private message-specific URLs; those are intentionally omitted from the public reproductions.
 
-> [!IMPORTANT]
-> **The current SIP brief video is available:** [Watch on YouTube](https://youtu.be/cqMiUOfy-Ek).
->
-> Recent progress includes an updated speech, presentation materials, a proposed parts list, and a concept rendering of the test module. The rendering illustrates the planned layout and does not show a completed build.
->
-> The prototype will use 12V DC with UPS backup for monitoring only. Assembly, programming, and functionality testing remain pending.
+## Security and limitations
 
-The primary setback remains the loss of access to the two original installations. Building a standalone test module will provide an accessible platform for continued development, testing, and presentation.
+The functional prototype demonstrates monitoring and notification, **not electrical protection**. Its 12V sensing hardware is not suitable for direct connection to -48V telecommunications circuits. Production use would need appropriately rated sensing hardware, power protection, physical and environmental validation, and reliability testing.
 
-For the planned demonstration, a switch will disconnect the main 12V supply while the UPS keeps the Arduino and sensors operating. This will allow the monitoring system to detect and report the power loss. The LoRaWAN gateway will remain separately powered.
+LoRaWAN uses OTAA session security, but the present direct-Ethernet MQTT link uses port 1883 **without encryption or broker authentication**. Restrict access to the demonstration network. A production deployment would require MQTT TLS, authentication, topic permissions, hardened gateway access, and separate device credentials. Outage alerting also depends on gateway, laptop, network, queue, and email service availability.
 
-The revised design also provides an opportunity to explore LoRaWAN networking, device authentication, and protection of communication credentials.
+No SMTP passwords, radio application keys, private environment files, local logs, or raw monitoring databases are included in the public website.
 
-## Planned Minimum Demonstration
+## Website structure
 
-The initial demonstration will aim to:
-
-1. Show normal operation of the two monitored 12V circuits.
-2. Use a switch to turn off the main supply.
-3. Keep the controller and sensors operating through the UPS.
-4. Transmit the outage status over LoRaWAN.
-5. Display the received status in an application.
-6. Restore power and verify a recovery report.
-
-This demonstration has not yet been completed. The current SIP brief video explains the project and planned functionality.
-
-## Proposed Development Timeline
-
-The earlier Week 3 functionality target has been revised to reflect the remaining work and component availability.
-
-| Stage | Planned Work | Completion Target |
-|---|---|---|
-| Design and selection | Confirm components, UPS requirements, and gateway arrangements. | Week 4 |
-| Assembly and programming | Assemble the 12V test module and develop sensing and reporting functions. | Week 4, subject to parts availability |
-| Initial functionality | Verify outage detection and LoRaWAN reporting while monitoring runs on UPS power. | After assembly and integration |
-| Validation and documentation | Test fault and recovery conditions, record the functioning prototype, and update documentation. | Following successful functionality testing |
-
-This timeline is a target and depends on component availability and successful integration.
-
-## Remaining Work
-
-- Finalize the controller, LoRaWAN hardware, circuit sensors, and UPS.
-- Build the off-tower test and display module.
-- Program circuit monitoring and fault detection.
-- Establish the LoRaWAN reporting path and receiving application.
-- Plan device authentication and secure handling of communication credentials.
-- Verify that monitoring remains operational when the main supply is switched off.
-- Test normal, fault, and recovery conditions.
-- Update diagrams to match the revised design.
-- Revise the written SIP Brief with dated and highlighted progress.
-- Capture photographs and video of the functioning prototype.
-
-## Website Files and Navigation
-
-| Page | Purpose |
-|---|---|
-| `index.html` | Portfolio introduction and entry point for the Boards, SIP, and projects |
-| `sip.html` | Innovation claim, development status, field iterations, monitoring design, SIP Brief, and videos |
-| `boards.html` | Overview linking the two degree pathways and portfolio status |
-| `network-engineering.html` | Network Engineering degree objectives and evidence placeholders |
-| `network-security.html` | Network Security degree objectives and evidence placeholders |
-| `projects.html` | Additional project work |
-| `links.html` | References and supporting links |
+| Path | Purpose |
+| --- | --- |
+| `index.html` | Technical portfolio home |
+| `sip.html` | Updated SIP overview, working demonstration, test results, revised brief, and email evidence |
+| `boards.html` | Boards portfolio overview |
+| `network-engineering.html` | Network Engineering objectives and evidence |
+| `network-security.html` | Network Security objectives and evidence |
+| `projects.html` | Selected technical and professional projects |
+| `links.html` | References and resources |
 | `contact.html` | Contact information |
-| `style.css` | Shared responsive theme, navigation, panels, and SIP-specific layouts |
-| `site.js` | Shared navigation generated consistently across the pages |
+| `assets/sip-evidence/` | Public redacted notification PDFs |
+| `site.js` | Shared navigation; standard same-tab link behavior |
+| `style.css` | Shared responsive styling |
 
-The website is a static HTML, CSS, and JavaScript site published through GitHub Pages from the `main` branch. It does not require a build system or external framework.
+The static website publishes through GitHub Pages from `main`. Earlier photographs, diagrams, and presentations remain available as an archive of the project's evolution. Older solar and cellular concepts are historical and do not represent the final Arduino / LoRaWAN implementation.
 
-### Making Website Changes
+## Contact
 
-1. Create a development branch from `main`.
-2. Edit the relevant HTML and shared styles while preserving working links and existing media.
-3. Preview the site locally or in GitHub Codespaces. For example, run `python3 -m http.server 8000` from the repository directory and open the forwarded port.
-4. Open and review a pull request, then merge approved changes into `main`.
-5. Wait for the GitHub Pages deployment to finish and verify the published pages.
-
-GitHub Pages may cache stylesheets. When changing shared CSS, update the version parameter on the stylesheet links across affected pages so visitors receive the latest design.
-
-## Documentation Notes
-
-Earlier diagrams, photographs, and videos are retained to show the project's development history. Some materials describe the previous cellular and solar concepts and may not reflect the current Arduino, LoRaWAN, and UPS design.
-
-The [current SIP brief video](https://youtu.be/cqMiUOfy-Ek) presents the latest project update. The earlier written SIP Brief remains a separate PDF and requires its own revision.
-
-Concept images illustrate proposed designs. Photographs and test results will document the completed prototype when available.
-
-## Feedback
-
-Feedback is welcome on:
-
-- Clarity of the innovation claim and project scope.
-- Website professionalism and readability.
-- Distinction between completed features and planned development.
-- Effectiveness of the visuals in explaining the design.
-- Clarity of the proposed functionality demonstration.
-
-## Author
-
-**Caleb Quisenberry**  
-Network Engineering and Cybersecurity  
-University of Advancing Technology
-
-[LinkedIn](https://www.linkedin.com/in/caleb-quisenberry-611b11b3) | [GitHub Repository](https://github.com/FlyingQ-Inc/SIP_Project)
+[LinkedIn](https://www.linkedin.com/in/caleb-quisenberry-611b11b3) · [GitHub repository](https://github.com/FlyingQ-Inc/SIP_Project)
