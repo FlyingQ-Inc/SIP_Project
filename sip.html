@@ -84,7 +84,7 @@
       <h2>Project Description</h2>
       <p>Based on my experience with fixed wireless infrastructure, I developed two field-deployed distribution iterations. I then built and tested a standalone monitoring prototype with an Arduino MKR WAN 1310, three INA219 sensors, a RAK LoRaWAN gateway, and a Python notification service.</p>
       <nav class="sip-jump-nav" aria-label="SIP page sections">
-        <a href="#sip-status">Results</a><a href="#sip-demonstration">Demonstration</a><a href="#sip-brief">Revised Brief</a><a href="#sip-history">Field Installations</a><a href="#sip-design">Architecture</a>
+        <a href="#sip-status">Results</a><a href="#sip-demonstration">Demonstration</a><a href="#sip-evidence">Email PDFs</a><a href="#sip-brief">Revised Brief</a><a href="#sip-history">Field Installations</a><a href="#sip-design">Architecture</a>
       </nav>
       <section class="progress-update">
         <h2>Prototype Complete: November 22, 2026</h2>
@@ -104,12 +104,35 @@
       </table>
       <p>These are separate fault and normal-state email records, not necessarily successive events in that order. A separate connection-loss notification reported a lack of readings for at least three minutes and thirty seconds.</p>
     </section>
+
+    <section id="sip-evidence" class="sip-section">
+      <span class="eyebrow">November 22, 2026 · Supporting records</span>
+      <h2>PDF Email Notification Evidence</h2>
+      <p>These public-facing PDF reproductions are transcribed from the received Gmail notification exports. Personal email addresses and private Gmail message URLs have been removed. Each file retains the original notification's event ID, measurement values, and timestamp. The recorded normal-state notifications preceded the fault notifications in this test series and should not be interpreted as subsequent recoveries from those exact faults.</p>
+      <h3>Incoming DC circuit</h3>
+      <ul>
+        <li><a href="assets/sip-evidence/incoming-fault.pdf">Incoming fault notification (5.57 V, event 29, PDF)</a></li>
+        <li><a href="assets/sip-evidence/incoming-restored.pdf">Incoming normal-state notification (11.89 V, event 26, PDF)</a></li>
+      </ul>
+      <h3>Load 1</h3>
+      <ul>
+        <li><a href="assets/sip-evidence/load-1-fault-format-preview.pdf">Load 1 fault notification (5.58 V, event 30, format preview, PDF)</a></li>
+        <li><a href="assets/sip-evidence/load-1-restored.pdf">Load 1 normal-state notification (11.89 V, event 27, PDF)</a></li>
+      </ul>
+      <h3>Load 2</h3>
+      <ul>
+        <li><a href="assets/sip-evidence/load-2-fault.pdf">Load 2 fault notification (5.56 V, event 31, PDF)</a></li>
+        <li><a href="assets/sip-evidence/load-2-restored.pdf">Load 2 normal-state notification (11.88 V, event 28, PDF)</a></li>
+      </ul>
+      <h3>Monitoring continuity</h3>
+      <p><a href="assets/sip-evidence/monitor-connection-lost.pdf">Monitor connection-loss notification (3 minutes 30 seconds, event 32, PDF)</a></p>
+    </section>
     <section id="sip-demonstration" class="sip-section">
       <span class="eyebrow">Working prototype</span>
       <h2>Final Technical Demonstration</h2>
       <p>This video records the physical prototype and its working demonstration. It is supporting technical evidence, separate from the required five-minute SIP409 Showcase presentation.</p>
       <iframe src="https://www.youtube-nocookie.com/embed/4rTvz5r6Yhw" title="SIP completed monitoring prototype demonstration" class="video-frame" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <p><a href="https://youtu.be/4rTvz5r6Yhw" target="_blank" rel="noopener noreferrer">Open the prototype walkthrough on YouTube</a></p>
+      <p><a href="https://youtu.be/4rTvz5r6Yhw" rel="noopener noreferrer">Open the prototype walkthrough on YouTube</a></p>
       <p>The separate five-minute SIP409 Showcase video will be linked here after it is recorded and published.</p>
     </section>
     <section id="sip-brief" class="sip-section">
@@ -239,7 +262,6 @@
       <p>
         <a
           href="https://youtu.be/cqMiUOfy-Ek"
-          target="_blank"
           rel="noopener noreferrer">
           Watch the current SIP brief on YouTube
         </a>
@@ -275,7 +297,6 @@
       <h3>SIP Pitch</h3>
       <a
         href="https://youtu.be/fSgBynqtiJQ"
-        target="_blank"
         rel="noopener noreferrer">
         <img
           src="https://img.youtube.com/vi/fSgBynqtiJQ/hqdefault.jpg"
@@ -286,7 +307,6 @@
       <h3>Design Prototype Video</h3>
       <a
         href="https://youtu.be/8u982uj8HjU"
-        target="_blank"
         rel="noopener noreferrer">
         <img
           src="https://img.youtube.com/vi/8u982uj8HjU/hqdefault.jpg"
@@ -301,14 +321,12 @@
       Follow me on:
       <a
         href="https://www.linkedin.com/in/caleb-quisenberry-611b11b3"
-        target="_blank"
         rel="noopener noreferrer">LinkedIn</a>
     </p>
     <p>
       Explore my repository on GitHub:
       <a
         href="https://github.com/FlyingQ-Inc/SIP_Project"
-        target="_blank"
         rel="noopener noreferrer">SIP Repository</a>
     </p>
   </footer>
