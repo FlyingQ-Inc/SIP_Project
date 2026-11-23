@@ -4,8 +4,5 @@ const current=location.pathname.split('/').pop()||'index.html';
 const nav=document.querySelector('header nav');
 if(nav){nav.setAttribute('aria-label','Main navigation');const ul=document.createElement('ul');for(const [path,label] of pages){const li=document.createElement('li'),a=document.createElement('a');a.href=path;a.textContent=label;if(path===current)a.setAttribute('aria-current','page');li.append(a);ul.append(li)}nav.replaceChildren(ul)}
 
-// Open links in a separate tab so the current portfolio page stays available.
-for (const link of document.querySelectorAll('a[href]')) {
-  link.target = '_blank';
-  link.relList.add('noopener');
-}
+// Use standard same-tab navigation for internal and external links.
+// The link target is not overridden by JavaScript.
