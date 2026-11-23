@@ -84,7 +84,7 @@
       <h2>Project Description</h2>
       <p>Based on my experience with fixed wireless infrastructure, I developed two field-deployed distribution iterations. I then built and tested a standalone monitoring prototype with an Arduino MKR WAN 1310, three INA219 sensors, a RAK LoRaWAN gateway, and a Python notification service.</p>
       <nav class="sip-jump-nav" aria-label="SIP page sections">
-        <a href="#sip-status">Results</a><a href="#sip-demonstration">Demonstration</a><a href="#sip-evidence">Email PDFs</a><a href="#sip-brief">Revised Brief</a><a href="#sip-history">Field Installations</a><a href="#sip-design">Architecture</a>
+        <a href="#sip-status">Results</a><a href="#sip-demonstration">Demonstration</a><a href="#sip-evidence">Email PDFs</a><a href="#sip-showcase">Final Showcase</a><a href="#sip-brief">Revised Brief</a><a href="#sip-history">Field Installations</a><a href="#sip-design">Architecture</a>
       </nav>
       <section class="progress-update">
         <h2>Prototype Complete: November 22, 2026</h2>
@@ -145,7 +145,42 @@
       </figure>
       <iframe src="https://www.youtube-nocookie.com/embed/4rTvz5r6Yhw" title="SIP completed monitoring prototype demonstration" class="video-frame" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       <p><a href="https://youtu.be/4rTvz5r6Yhw" rel="noopener noreferrer">Open the prototype walkthrough on YouTube</a></p>
-      <p>The separate five-minute SIP409 Showcase video will be linked here after it is recorded and published.</p>
+      <p>The completed five-minute SIP409 Showcase presentation has been recorded. The video file is being prepared for publication in this repository. Once it is uploaded, it will appear in the Showcase player below.</p>
+    </section>
+    <section id="sip-showcase" class="sip-section">
+      <span class="eyebrow">SIP409 · Final faculty Showcase</span>
+      <h2>Five-Minute Showcase Presentation</h2>
+      <p>This is the final SIP409 presentation, distinct from the longer technical walkthrough above. It introduces the fixed wireless infrastructure problem, the modular distribution innovation, the complete LoRaWAN monitoring path, and the demonstrated fault-notification results.</p>
+      <div id="sip-showcase-player" aria-live="polite"></div>
+      <p id="sip-showcase-status">The final presentation has been recorded. Its web video file is being added to the repository.</p>
+      <script>
+        (function () {
+          const source = "assets/videos/SIP409_cquisenberry_5minVid.mp4";
+          const player = document.getElementById("sip-showcase-player");
+          const status = document.getElementById("sip-showcase-status");
+          if (!player || !status) return;
+          fetch(source, { method: "HEAD", cache: "no-store" })
+            .then(function (response) {
+              if (!response.ok) return;
+              const video = document.createElement("video");
+              video.controls = true;
+              video.preload = "metadata";
+              video.playsInline = true;
+              video.setAttribute("aria-label", "Final five-minute SIP409 Showcase presentation");
+              video.style.cssText = "display:block;width:100%;max-width:800px;height:auto;aspect-ratio:16/9;background:#081421;border-radius:6px";
+              video.src = source;
+              player.appendChild(video);
+              const p = document.createElement("p");
+              const link = document.createElement("a");
+              link.href = source;
+              link.textContent = "Open the final SIP409 Showcase MP4";
+              p.appendChild(link);
+              player.appendChild(p);
+              status.textContent = "Final SIP409 Showcase presentation, recorded November 2026.";
+            })
+            .catch(function () { /* Keep the pending-upload notice. */ });
+        }());
+      </script>
     </section>
     <section id="sip-brief" class="sip-section">
       <span class="eyebrow">Updated project brief · November 2026</span>
