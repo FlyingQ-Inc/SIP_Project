@@ -18,6 +18,7 @@ This repository publishes my SIP documentation alongside my UAT Boards portfolio
 - [Network Security objectives](https://flyingq-inc.github.io/SIP_Project/network-security.html)
 - [Projects](https://flyingq-inc.github.io/SIP_Project/projects.html)
 - [Working prototype technical walkthrough](https://youtu.be/4rTvz5r6Yhw)
+- [Photograph of completed prototype enclosure](assets/sip-evidence/completed-monitoring-enclosure.svg)
 - [Earlier SIP brief video](https://youtu.be/cqMiUOfy-Ek)
 
 **Note:** The working-prototype walkthrough is technical demonstration footage, not the separate required five-minute SIP409 Showcase presentation. That final Showcase video will be linked when it is published.
