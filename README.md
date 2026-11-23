@@ -18,6 +18,7 @@ This repository publishes my SIP documentation alongside my UAT Boards portfolio
 - [Network Security objectives](https://flyingq-inc.github.io/SIP_Project/network-security.html)
 - [Projects](https://flyingq-inc.github.io/SIP_Project/projects.html)
 - [Final five-minute SIP409 Showcase video](https://youtu.be/rCdH1X6FsqE)
+- [Final SIP409 Showcase MP4 — direct playback and download](https://flyingq-inc.github.io/SIP_Project/assets/videos/SIP409_cquisenberry_5minVid.mp4)
 - [Working prototype technical walkthrough](https://youtu.be/4rTvz5r6Yhw)
 - [Photograph of completed prototype enclosure](assets/sip-evidence/completed-monitoring-enclosure.svg)
 - [Earlier SIP brief video](https://youtu.be/cqMiUOfy-Ek)
@@ -28,7 +29,9 @@ All website links now use **the current browser tab**, including the academic ev
 
 ## Showcase media
 
-The finished five-minute SIP409 presentation is hosted on YouTube: https://youtu.be/rCdH1X6FsqE. It is embedded on the SIP webpage, where it plays without a separate GitHub-hosted MP4. The original local recording `SIP409_cquisenberry_5minVid.mp4` remains available in the SIP coursework folder for archiving and editing. The Showcase YouTube URL is the submission link for the SIP409 faculty presentation.
+The finished five-minute SIP409 presentation is hosted on YouTube: https://youtu.be/rCdH1X6FsqE. It is embedded on the SIP webpage. A [GitHub-hosted MP4](https://flyingq-inc.github.io/SIP_Project/assets/videos/SIP409_cquisenberry_5minVid.mp4) is also available for direct playback and download from the Showcase section. The original local recording `SIP409_cquisenberry_5minVid.mp4` remains available in the SIP coursework folder for archiving and editing. The Showcase YouTube URL is the submission link for the SIP409 faculty presentation.
+
+The MP4 runs **4:37.3** and is **47.64 MiB** (49,949,218 bytes), at **1920×1080, 60 fps, 16:9**. It preserves the original H.264 video without re-encoding, uses 128 kbps AAC stereo audio, and includes faststart for web playback. The original local recording is unchanged.
 
 ## Problem and innovation
 
