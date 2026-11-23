@@ -80,105 +80,47 @@
     <section class="sip-intro">
       <span class="eyebrow">Student Innovation Project · UAT</span>
       <h2>Innovation Claim</h2>
-      <p>
-        This project combines power and fiber distribution in a modular
-        tower-mounted unit designed to reduce cable runs, simplify installation,
-        and support future site expansion. The planned addition of circuit
-        monitoring and remote fault reporting is intended to help technicians
-        identify power problems from the ground, reducing unnecessary diagnostic
-        climbs and improving maintenance efficiency.
-      </p>
-
+      <p>My modular tower-mounted design combines fiber and DC power distribution to reduce long cable runs and improve maintainability. The completed off-tower prototype demonstrates circuit monitoring and remote notifications using LoRaWAN.</p>
       <h2>Project Description</h2>
-      <p>
-        I developed this project in response to challenges I encountered while
-        designing and installing fixed wireless sites. The first two iterations
-        introduced fiber distribution followed by DC circuit protection and power
-        distribution near the tower-mounted radios. My current focus is building
-        an off-tower test and display module to demonstrate the distribution
-        concept and develop the monitoring functions. The revised design will
-        use an Arduino-based controller with compatible LoRaWAN hardware to
-        transmit circuit status and fault information. This is a solo project
-        involving hardware integration, programming, networking, and security
-        for connected devices.
-      </p>
+      <p>Based on my experience with fixed wireless infrastructure, I developed two field-deployed distribution iterations. I then built and tested a standalone monitoring prototype with an Arduino MKR WAN 1310, three INA219 sensors, a RAK LoRaWAN gateway, and a Python notification service.</p>
       <nav class="sip-jump-nav" aria-label="SIP page sections">
-        <a href="#sip-status">Current Status</a>
-        <a href="#sip-history">Field Installations</a>
-        <a href="#sip-design">Monitoring Design</a>
-        <a href="#current-sip-brief">Brief Video</a>
+        <a href="#sip-status">Results</a><a href="#sip-demonstration">Demonstration</a><a href="#sip-brief">Revised Brief</a><a href="#sip-history">Field Installations</a><a href="#sip-design">Architecture</a>
       </nav>
-
-      <section class="progress-update" aria-labelledby="progress-heading">
-        <h2 id="progress-heading">
-          Progress Update:
-          <time datetime="2026-09-30">September 30, 2026</time>
-        </h2>
-        <p>
-          <mark>
-            My current SIP brief video is available. Recent progress includes
-            an updated speech, presentation materials, a proposed parts list,
-            and a concept rendering of the off-tower test module.
-          </mark>
-          The rendering illustrates the proposed layout and does not represent
-          a completed build.
-        </p>
-        <p>
-          Following my job change, I no longer have access to the first two
-          field installations. Although photographs remain available to document
-          those iterations, I cannot use the installations for further testing
-          or a live demonstration. The off-tower module will provide an
-          accessible platform for development, testing, and presentation.
-        </p>
-        <p>
-          <mark>
-            The revised prototype will use 12V DC, an Arduino-based controller,
-            and LoRaWAN reporting. A small UPS will power only the controller
-            and sensors. Solar power is no longer part of the design.
-          </mark>
-          For the demonstration, I will use a switch to turn off the main
-          supply while the monitoring electronics remain powered to detect
-          and report the outage. The gateway will remain separately powered.
-        </p>
-        <p>
-          Assembly, programming, and functionality testing remain pending.
-          My Week 4 target is to assemble and test the module, subject to
-          parts availability, then record its verified operation.
-        </p>
-        <p>
-          <a href="#current-sip-brief">Watch the current SIP brief video</a>
-        </p>
+      <section class="progress-update">
+        <h2>Prototype Complete: November 22, 2026</h2>
+        <p><mark>Physical circuit fault and recovery tests passed for Incoming, Load 1, and Load 2.</mark> Email alerts were received, including a separate connection-loss notification. The video and results below document the functioning monitoring prototype.</p>
       </section>
-
     </section>
     <section id="sip-status" class="sip-section">
-      <span class="eyebrow">Development status</span>
-      <h2>Current Status and Remaining Work</h2>
-      <p>
-        Completed work includes the two earlier physical distribution
-        installations, updated presentation materials, and a proposed parts
-        list for the revised prototype. Arduino-based monitoring, LoRaWAN
-        reporting, and the off-tower module have not yet been demonstrated.
-        Remaining work includes confirming components, assembling the module,
-        programming fault detection, establishing the reporting path, and
-        testing normal operation, power loss, and recovery. Security work
-        will include exploring LoRaWAN authentication and protecting
-        communication credentials.
-      </p>
-
-      <h2>Proposed Timeline to Functionality</h2>
-      <p>
-        The earlier Week 3 functionality target has been revised. My Week 4
-        target is to confirm components, assemble the 12V module, and develop
-        the monitoring and reporting functions. Testing will verify that
-        switching off the main supply produces a received fault report while
-        the UPS keeps the controller and sensors operating. After successful
-        testing, I will record the demonstration and update the documentation.
-        Completion depends on parts availability and successful integration.
-        The current brief video presents the project update; a video showing
-        verified prototype functionality remains pending.
-      </p>
-
+      <span class="eyebrow">Completed proof of concept</span>
+      <h2>Verified Monitoring Results</h2>
+      <p>The Arduino monitors incoming power and two loads, confirms fault and recovery states across three samples, retains serial diagnostics, and transmits state changes plus a heartbeat every 60 seconds. The Python receiver stores telemetry in SQLite and suppresses duplicate circuit notifications.</p>
+      <h3>Recorded Email Notifications</h3>
+      <table style="width:100%;border-collapse:collapse;text-align:left">
+        <thead><tr><th>Monitored circuit</th><th>Fault reading</th><th>Normal reading</th></tr></thead>
+        <tbody><tr><th>Incoming</th><td>5.57 V</td><td>11.89 V</td></tr>
+        <tr><th>Load 1</th><td>5.58 V</td><td>11.89 V</td></tr>
+        <tr><th>Load 2</th><td>5.56 V</td><td>11.88 V</td></tr></tbody>
+      </table>
+      <p>These are separate fault and normal-state email records, not necessarily successive events in that order. A separate connection-loss notification reported a lack of readings for at least three minutes and thirty seconds.</p>
+    </section>
+    <section id="sip-demonstration" class="sip-section">
+      <span class="eyebrow">Working prototype</span>
+      <h2>Final Technical Demonstration</h2>
+      <p>This video records the physical prototype and its working demonstration. It is supporting technical evidence, separate from the required five-minute SIP409 Showcase presentation.</p>
+      <iframe src="https://www.youtube-nocookie.com/embed/4rTvz5r6Yhw" title="SIP completed monitoring prototype demonstration" class="video-frame" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <p><a href="https://youtu.be/4rTvz5r6Yhw" target="_blank" rel="noopener noreferrer">Open the prototype walkthrough on YouTube</a></p>
+      <p>The separate five-minute SIP409 Showcase video will be linked here after it is recorded and published.</p>
+    </section>
+    <section id="sip-brief" class="sip-section">
+      <span class="eyebrow">Updated project brief · November 2026</span>
+      <h2>Revised SIP Brief</h2>
+      <h3>Problem</h3><p>Separate tower-length fiber and DC power runs increase installation complexity and make fixed wireless sites harder to expand and troubleshoot. Individual circuit failures can be difficult to diagnose without a site visit.</p>
+      <h3>Innovation</h3><p>The modular tower-mounted distribution concept consolidates power and fiber near radios. The monitoring subsystem provides remote individual-circuit visibility, combining physical distribution improvements with notification capability.</p>
+      <h3>Implementation</h3><p>Three INA219 sensors report through I²C to an Arduino MKR WAN 1310. LoRaWAN delivers data to the RAK gateway built-in server, which forwards it over local Ethernet/MQTT to a Python receiver. The receiver writes SQLite records and sends Gmail SMTP alerts. A UPS keeps the monitoring electronics operational during the demonstrated input supply outage.</p>
+      <h3>Results</h3><p>Physical fault and recovery testing passed for all three monitored circuits. The recorded notifications show fault voltages around 5.6 V, normal voltages near 11.9 V, and a separate monitoring connection-loss alert.</p>
+      <h3>Limitations and Next Steps</h3><p>The completed hardware is a 12V proof of concept, not a production -48V protection system. INA219 sensors cannot directly monitor -48V. Production development requires appropriately rated sensing and circuit protection, environmental testing, reliability validation, and authenticated encrypted MQTT transport.</p>
+      <h3>Benefit</h3><p>Combining modular distribution with remote monitoring could reduce tower cabling and unnecessary diagnostic visits while improving fault visibility at remote sites.</p>
     </section>
     <section id="sip-history" class="sip-section">
       <span class="eyebrow">Design evolution</span>
