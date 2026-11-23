@@ -21,9 +21,19 @@ This repository publishes my SIP documentation alongside my UAT Boards portfolio
 - [Photograph of completed prototype enclosure](assets/sip-evidence/completed-monitoring-enclosure.svg)
 - [Earlier SIP brief video](https://youtu.be/cqMiUOfy-Ek)
 
-**Note:** The working-prototype walkthrough is technical demonstration footage, not the separate required five-minute SIP409 Showcase presentation. That final Showcase video will be linked when it is published.
+**SIP409 Showcase:** The separate five-minute faculty presentation has been recorded as `SIP409_cquisenberry_5minVid.mp4`. The public SIP page contains a Showcase player that activates when `assets/videos/SIP409_cquisenberry_5minVid.mp4` is committed and served by GitHub Pages. Until that upload is complete, it shows a pending-publication message. The longer YouTube prototype walkthrough remains supporting technical evidence.
 
 All website links now use **the current browser tab**, including the academic evidence links and externally hosted resources. The browser's Back button returns to the portfolio.
+
+## Showcase media publishing
+
+The final five-minute SIP409 Showcase has been recorded locally in `~/Projects/School/SIP408_409/SIP409_cquisenberry_5minVid.mp4`. This file is **not yet in the public repository**. A local Codex session will prepare and commit a browser-compatible H.264/AAC MP4 to:
+
+```text
+assets/videos/SIP409_cquisenberry_5minVid.mp4
+```
+
+The GitHub Pages SIP webpage detects the published file before displaying an HTML5 player, so visitors do not see a broken video while the upload is pending. Preserve the original recording. Keep the GitHub-hosted file below GitHub's 100 MB per-file limit without using Git LFS for Pages delivery. Separately upload the Showcase to YouTube or Vimeo for the SIP409 faculty submission requirement, then add that platform URL to the website and README.
 
 ## Problem and innovation
 
