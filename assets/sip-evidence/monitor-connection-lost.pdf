@@ -1,0 +1,77 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 1748 >>
+stream
+1 1 1 rg 0 0 612 792 re f
+0.08 0.22 0.37 rg 0 778 612 14 re f
+0.13 0.19 0.28 rg
+BT /F2 21 Tf 42 729 Td (SIP POWER MONITOR) Tj ET
+0.34 0.40 0.49 rg
+BT /F1 11 Tf 42 702 Td (PUBLIC REDACTED EMAIL RECORD) Tj ET
+0.82 0.85 0.88 RG 1 w 42 684 m 570 684 l S
+0.13 0.19 0.28 rg
+BT /F2 19 Tf 42 648 Td (Monitor connection lost) Tj ET
+0.34 0.40 0.49 rg
+BT /F1 11 Tf 42 578 Td (Notification time) Tj ET
+0.13 0.19 0.28 rg
+BT /F2 13 Tf 42 556 Td (Nov 22, 2026 at 05:45:55 PM MST) Tj ET
+0.34 0.40 0.49 rg
+BT /F1 11 Tf 42 516 Td (Circuit / System) Tj ET
+0.13 0.19 0.28 rg
+BT /F2 14 Tf 42 495 Td (Monitoring node / receiver) Tj ET
+0.34 0.40 0.49 rg
+BT /F1 11 Tf 42 453 Td (Voltage) Tj ET
+BT /F1 11 Tf 290 453 Td (Current) Tj ET
+0.13 0.19 0.28 rg
+BT /F2 18 Tf 42 431 Td (Not available) Tj ET
+BT /F2 18 Tf 290 431 Td (Not available) Tj ET
+0.34 0.40 0.49 rg
+BT /F1 11 Tf 42 390 Td (Reported status) Tj ET
+0.13 0.19 0.28 rg
+BT /F2 14 Tf 42 367 Td (Connection lost) Tj ET
+0.34 0.40 0.49 rg
+BT /F1 11 Tf 42 325 Td (Notification details) Tj ET
+0.13 0.19 0.28 rg
+BT /F1 11 Tf 42 302 Td (No new readings have reached the laptop for at least) Tj ET
+0.13 0.19 0.28 rg
+BT /F1 11 Tf 42 284 Td (3 minutes 30 seconds. Check power and connections) Tj ET
+0.13 0.19 0.28 rg
+BT /F1 11 Tf 42 266 Td (for the monitoring node, gateway, and laptop.) Tj ET
+0.82 0.85 0.88 RG 1 w 42 145 m 570 145 l S
+0.13 0.19 0.28 rg
+BT /F2 11 Tf 42 124 Td (Device: SIPPowerNode    Event ID: 32) Tj ET
+0.34 0.40 0.49 rg
+BT /F1 9 Tf 42 91 Td (Transcribed from the received Nov 22, 2026 Gmail PDF export.) Tj ET
+BT /F1 9 Tf 42 77 Td (Personal addresses and Gmail message URLs have been omitted.) Tj ET
+BT /F1 9 Tf 42 63 Td (These separate records should not be read as a chronological event sequence.) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000321 00000 n 
+0000000396 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2195
+%%EOF
